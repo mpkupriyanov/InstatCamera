@@ -22,7 +22,7 @@ pod 'InstatCamera'
 
 ## Author
 
-mpkupriyanov, mpkupriyanov@gmail.com
+Mikhail Kupriyanov, mpkupriyanov@gmail.com
 
 ## License
 

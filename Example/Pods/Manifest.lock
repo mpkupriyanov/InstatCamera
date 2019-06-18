@@ -1,0 +1,16 @@
+PODS:
+  - InstatCamera (0.1.0)
+
+DEPENDENCIES:
+  - InstatCamera (from `../`)
+
+EXTERNAL SOURCES:
+  InstatCamera:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  InstatCamera: 474a99db6c50e99c0044899a27af8439e84e94e3
+
+PODFILE CHECKSUM: b55ce0a891b78b2fea5f45805c1dae18fd8420a7
+
+COCOAPODS: 1.6.1
