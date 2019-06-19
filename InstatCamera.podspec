@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'InstatCamera'
   s.version          = '0.1.0'
-  s.summary          = 'InstatCamera - video recording by seamless chunks'
+  s.summary          = 'InstatCamera - video recording with seamless chunks by 5 seconds'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Record video by seamless chunks
+  Video recording with seamless chunks by 5 seconds
                        DESC
 
   s.homepage         = 'https://github.com/mpkupriyanov/InstatCamera'

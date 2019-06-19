@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/InstatCamera.svg?style=flat)](https://cocoapods.org/pods/InstatCamera)
 
 
-Video recording by seamless chunks 
+Video recording with seamless chunks by 5 seconds
 Output:
 out00000.mov
 out00001.mov
