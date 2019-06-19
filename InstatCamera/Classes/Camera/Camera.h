@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 @import AVFoundation.AVCaptureSessionPreset;
+@class AVCaptureSession;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,8 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 };
 
 @interface Camera : NSObject
-@property (readonly) CameraStatus status;
+@property (nonatomic, readonly) AVCaptureSession* session;
+@property (nonatomic, readonly) CameraStatus status;
 
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
 - (void) startRecording;

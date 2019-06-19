@@ -18,6 +18,8 @@
 		88A4E5A74271F404600D1B3F869A77B7 /* Pods-InstatCamera_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3420A2814AE50B90F82BD6B0ADBC0B1 /* Pods-InstatCamera_Example-dummy.m */; };
 		AAB87CA4B1EF399ADBFB824E4B5B1EAE /* InstatCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9B56F8988635C24715FA090D48A62C /* InstatCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1E26EC3691B8B0D48EEA43CB67D5C02 /* InstatCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B023F89CDE2D91F56E3EEC388E5AC /* InstatCamera-dummy.m */; };
+		CC4E794722BA48E200BA7B7D /* CameraPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E794522BA48E200BA7B7D /* CameraPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC4E794822BA48E200BA7B7D /* CameraPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E794622BA48E200BA7B7D /* CameraPreview.m */; };
 		E49937E133C07FA645B9C7CB284ADC58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		FF2674AB6F4CF9D6B2561042ED6BDC32 /* Pods-InstatCamera_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89BC7F1D0CF7A28B9764624554A7FFB8 /* Pods-InstatCamera_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		B8814607A80DD66221C9B9171D6988DD /* Pods-InstatCamera_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Tests-Info.plist"; sourceTree = "<group>"; };
 		BFEAF17945D5BE70AB6DC0D6E584CE23 /* InstatCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "InstatCamera-Info.plist"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC4E794522BA48E200BA7B7D /* CameraPreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraPreview.h; sourceTree = "<group>"; };
+		CC4E794622BA48E200BA7B7D /* CameraPreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraPreview.m; sourceTree = "<group>"; };
 		D0A9B2A5A3A3FD1DA8BC7623F742694E /* InstatCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatCamera.m; sourceTree = "<group>"; };
 		D420EDD7D7CFB4B3DC77AA9F48E7675C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC825A878A256D4A23BE294E6668BB31 /* Camera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		1B3A708715299DBBB0EAE00581F23319 /* InstatCamera */ = {
 			isa = PBXGroup;
 			children = (
+				CC4E794422BA48C700BA7B7D /* CameraPreview */,
 				50989CA5D1179F3B20575DC6F87FE461 /* Camera */,
 				3AA1FD327C9207F59306D6F57F8FFC77 /* InstatCamera */,
 				8CB758AA33CE720F53F4F28F1D6FB071 /* Pod */,
@@ -212,6 +217,16 @@
 			path = "Target Support Files/Pods-InstatCamera_Tests";
 			sourceTree = "<group>";
 		};
+		CC4E794422BA48C700BA7B7D /* CameraPreview */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E794522BA48E200BA7B7D /* CameraPreview.h */,
+				CC4E794622BA48E200BA7B7D /* CameraPreview.m */,
+			);
+			name = CameraPreview;
+			path = InstatCamera/Classes/CameraPreview;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +270,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4E794722BA48E200BA7B7D /* CameraPreview.h in Headers */,
 				7897FCFC8614EF3C50EE288AFF7AC145 /* Camera.h in Headers */,
 				AAB87CA4B1EF399ADBFB824E4B5B1EAE /* InstatCamera-umbrella.h in Headers */,
 				775251A51B17785AC171BEAF99B6880D /* InstatCamera.h in Headers */,
@@ -403,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74524993F6655CCA1BEF714949850E87 /* Camera.m in Sources */,
+				CC4E794822BA48E200BA7B7D /* CameraPreview.m in Sources */,
 				C1E26EC3691B8B0D48EEA43CB67D5C02 /* InstatCamera-dummy.m in Sources */,
 				7AB1B43B8B60D9FA757803DE2BEBCA48 /* InstatCamera.m in Sources */,
 			);

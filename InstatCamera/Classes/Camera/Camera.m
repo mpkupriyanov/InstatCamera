@@ -9,15 +9,15 @@
 @import AVFoundation;
 
 @interface Camera () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
-@property AVCaptureSession *session;
-@property AVCaptureSessionPreset sessionPreset;
-@property (assign) BOOL isRecording;
-@property dispatch_queue_t sessionQueue;
-@property (readwrite) CameraStatus status;
+@property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
+@property (nonatomic, assign) BOOL isRecording;
+@property (nonatomic) dispatch_queue_t sessionQueue;
+@property (nonatomic, readwrite) CameraStatus status;
 
-@property dispatch_queue_t captureSampleBufferQueue;
-@property AVCaptureVideoDataOutput *videoOutput;
-@property AVCaptureAudioDataOutput *audioOutput;
+@property (nonatomic) dispatch_queue_t captureSampleBufferQueue;
+@property (nonatomic, strong) AVCaptureVideoDataOutput *videoOutput;
+@property (nonatomic, strong) AVCaptureAudioDataOutput *audioOutput;
 
 @end
 @implementation Camera

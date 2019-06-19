@@ -8,9 +8,11 @@
 
 #import "MKViewController.h"
 #import <InstatCamera/InstatCamera.h>
+#import <InstatCamera/CameraPreview.h>
 
 @interface MKViewController ()
-@property InstatCamera *camera;
+@property (nonatomic, weak) IBOutlet CameraPreview *cameraPreview;
+@property (nonatomic, strong) InstatCamera *instatCamera;
 @end
 
 @implementation MKViewController
@@ -19,7 +21,9 @@
     [super viewDidLoad];
 	
     InstatCamera *camera = [[InstatCamera alloc] initWithCaptureSessionPreset:AVCaptureSessionPreset1280x720];
-    self.camera = camera;
+    
+    _cameraPreview.captureSession = camera.captureSession;
+    self.instatCamera = camera;
 }
 
 @end

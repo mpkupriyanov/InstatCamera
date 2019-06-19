@@ -9,10 +9,11 @@
 #import "Camera.h"
 
 @interface InstatCamera ()
-@property Camera *camera;
+@property (nonatomic, strong) Camera *camera;
 @end
 @implementation InstatCamera
 
+// MARK: - Life cycle
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset {
     self = [super init];
     if (self) {
@@ -20,5 +21,10 @@
         self.camera = camera;
     }
     return self;
+}
+
+// MARK: - Public
+- (AVCaptureSession *)captureSession {
+    return _camera.session;
 }
 @end
