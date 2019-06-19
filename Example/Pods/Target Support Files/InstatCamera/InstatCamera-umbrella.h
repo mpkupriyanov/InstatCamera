@@ -11,7 +11,15 @@
 #endif
 
 #import "Camera.h"
+#import "CameraPreview.h"
 #import "InstatCamera.h"
+#import "InstatSessionPreset.h"
+#import "InstatCameraDelegate.h"
+#import "InstatDefaultVideoSettings.h"
+#import "InstatSessionPresetAdapter.h"
+#import "OutputSampleBufferDelegate.h"
+#import "Writer.h"
+#import "WriterImpl.h"
 
 FOUNDATION_EXPORT double InstatCameraVersionNumber;
 FOUNDATION_EXPORT const unsigned char InstatCameraVersionString[];

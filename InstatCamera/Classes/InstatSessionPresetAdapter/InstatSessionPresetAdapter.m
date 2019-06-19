@@ -14,7 +14,8 @@
     switch (instatSessionPreset) {
         case preset720: return AVCaptureSessionPreset1280x720;
         case preset1080: return AVCaptureSessionPreset1920x1080;
-        default: return AVCaptureSessionPreset1280x720;
+        default: break;
     }
+    return AVCaptureSessionPreset1280x720;
 }
 @end

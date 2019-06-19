@@ -7,14 +7,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Writer.h"
-#import "OutputSampleBufferDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WriterImpl : NSObject <Writer, OutputSampleBufferDelegate>
-
+@interface WriterImpl : NSObject <Writer>
 /// Value in seconds. By default 5 sec
 @property (nonatomic, assign) NSTimeInterval chunkDuration;
+
+- (instancetype)initWithVideoSettings:(NSDictionary *) videoSettings;
+- (void)finish;
 @end
 
 NS_ASSUME_NONNULL_END

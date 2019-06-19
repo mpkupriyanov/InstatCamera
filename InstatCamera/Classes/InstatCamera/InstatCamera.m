@@ -9,6 +9,7 @@
 #import "WriterImpl.h"
 #import "Camera.h"
 #import "InstatSessionPresetAdapter.h"
+#import "InstatDefaultVideoSettings.h"
 
 @interface InstatCamera ()
 @property (nonatomic, strong) Camera *camera;
@@ -24,7 +25,8 @@
         self.instatSessionPreset = instatSessionPreset;
         AVCaptureSessionPreset sessionPreset = [InstatSessionPresetAdapter adapteeCaptureSessionPresetWith:instatSessionPreset];
         [self setupCameraWith:sessionPreset];
-        [self setupWriter];
+        [self setupWriterWith:instatSessionPreset];
+        self.camera.delegate = self.writer;
     }
     return self;
 }
@@ -34,6 +36,26 @@
     return _camera.session;
 }
 
+- (void)setDelegate:(id<InstatCameraDelegate>)delegate {
+    _writer.delegate = delegate;
+}
+
+- (void)startRecording {
+    [_camera startRecording];
+}
+
+- (void)stopRecording {
+    [_camera stopRecording];
+    [_writer finish];
+}
+
+- (void)clear {
+    [_writer clear];
+}
+
+- (BOOL)isRecording {
+    return _camera.isRecording;
+}
 // MARK: - Private : Camera
 - (void)setupCameraWith:(AVCaptureSessionPreset) sessionPreset {
     
@@ -42,9 +64,10 @@
 }
 
 // MARK: - Private : Writer
-- (void)setupWriter {
+- (void)setupWriterWith:(InstatSessionPreset) instatSessionPreset {
     
-    WriterImpl *writer = [WriterImpl new];
+    NSDictionary *defaultVideoSettings = [InstatDefaultVideoSettings videoSettingsWithSessionPreset:instatSessionPreset];
+    WriterImpl *writer = [[WriterImpl alloc] initWithVideoSettings:defaultVideoSettings];
     self.writer = writer;
 }
 @end

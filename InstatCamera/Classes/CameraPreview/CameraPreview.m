@@ -22,6 +22,10 @@
     return self.videoPreviewLayer.session;
 }
 
+- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
+    self.videoPreviewLayer.connection.videoOrientation = videoOrientation;
+}
+
 - (void)setCaptureSession:(AVCaptureSession *) session {
     
     self.videoPreviewLayer.session = session;

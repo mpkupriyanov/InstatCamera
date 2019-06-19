@@ -12,7 +12,7 @@
 @interface Camera () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
-@property (nonatomic, assign) BOOL isRecording;
+@property (nonatomic, assign, readwrite) BOOL isRecording;
 @property (nonatomic) dispatch_queue_t sessionQueue;
 @property (nonatomic, readwrite) CameraStatus status;
 

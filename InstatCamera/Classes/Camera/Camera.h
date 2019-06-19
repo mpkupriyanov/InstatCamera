@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 @interface Camera : NSObject
 @property (nonatomic, readonly) AVCaptureSession* session;
 @property (nonatomic, readonly) CameraStatus status;
+@property (nonatomic, assign, readonly) BOOL isRecording;
 @property (nonatomic, weak) id <OutputSampleBufferDelegate> delegate;
 
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;

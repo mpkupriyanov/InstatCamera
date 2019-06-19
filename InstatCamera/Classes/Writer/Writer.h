@@ -7,8 +7,14 @@
 
 #ifndef Writer_h
 #define Writer_h
+#import "OutputSampleBufferDelegate.h"
+@protocol InstatCameraDelegate;
 
-@protocol Writer <NSObject>
-
+@protocol Writer <NSObject, OutputSampleBufferDelegate>
+@property (nonatomic, weak) id <InstatCameraDelegate> delegate;
+/// Finish last chunk
+- (void)finish;
+/// Clear number of chunks
+- (void)clear;
 @end
 #endif /* Writer_h */

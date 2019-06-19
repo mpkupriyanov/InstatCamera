@@ -25,17 +25,77 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-Ix-vi8">
+                                <rect key="frame" x="142.5" y="268.5" width="90" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pbt-pD-eVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAK-wU-ED3">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="toggleRecording:" destination="whP-gf-Uak" eventType="touchUpInside" id="sPi-qz-fPR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J90-N4-1gd">
+                                                <rect key="frame" x="0.0" y="40" width="90" height="30"/>
+                                                <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <action selector="shareButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="8Gx-G3-u6x"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfU-n7-b5u">
+                                        <rect key="frame" x="0.0" y="100" width="90" height="30"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="removeButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="07h-Ii-Cmc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="3HI-F5-z4x"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-mm-i0d">
+                                <rect key="frame" x="99.5" y="428.5" width="176" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share after finish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-aL-ufC">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-3T-jGT">
+                                        <rect key="frame" x="127" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vk6-D0-dzd" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="9oH-5Q-9ar"/>
+                            <constraint firstItem="ggh-Ix-vi8" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Whz-tb-O3Z"/>
+                            <constraint firstItem="wbO-mm-i0d" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="bQk-6Z-7TK"/>
+                            <constraint firstItem="wbO-mm-i0d" firstAttribute="top" secondItem="ggh-Ix-vi8" secondAttribute="bottom" constant="30" id="d5o-ED-0MO"/>
                             <constraint firstItem="Vk6-D0-dzd" firstAttribute="top" secondItem="TpU-gO-2f1" secondAttribute="top" id="ewu-vb-O8N"/>
+                            <constraint firstItem="ggh-Ix-vi8" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="ogg-BD-eAo"/>
                             <constraint firstAttribute="bottom" secondItem="Vk6-D0-dzd" secondAttribute="bottom" id="xeu-KN-WWv"/>
                             <constraint firstAttribute="trailing" secondItem="Vk6-D0-dzd" secondAttribute="trailing" id="zaq-Je-sC7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraPreview" destination="Vk6-D0-dzd" id="TPN-cJ-Gds"/>
+                        <outlet property="removeButton" destination="cfU-n7-b5u" id="oQc-uk-VrI"/>
+                        <outlet property="shareButton" destination="J90-N4-1gd" id="NBn-JU-cwn"/>
+                        <outlet property="shareSwitch" destination="dmA-3T-jGT" id="lvE-Kd-4cO"/>
+                        <outlet property="toggleButton" destination="VAK-wU-ED3" id="3dO-Hn-alS"/>
+                        <outletCollection property="buttons" destination="cfU-n7-b5u" id="gI9-fc-vcG"/>
+                        <outletCollection property="buttons" destination="J90-N4-1gd" id="VHL-B3-XZm"/>
+                        <outletCollection property="buttons" destination="VAK-wU-ED3" id="UKi-WE-WJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

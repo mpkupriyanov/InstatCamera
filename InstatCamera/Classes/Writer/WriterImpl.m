@@ -6,6 +6,7 @@
 //
 
 #import "WriterImpl.h"
+#import "InstatCameraDelegate.h"
 @import AVFoundation;
 
 static const NSTimeInterval kDefaultChunkDuration = 5.000f;
@@ -21,18 +22,35 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 @property (nonatomic, strong) NSDictionary *videoSettings;
 @end
 @implementation WriterImpl
+@synthesize delegate;
 
-- (instancetype)initWithVideoSettings:(NSDictionary *) videoSettings
-{
+// MARK: - Life cycle
+- (instancetype)initWithVideoSettings:(NSDictionary *) videoSettings {
     self = [super init];
     if (self) {
         self.chunkDuration = kDefaultChunkDuration;
+        self.chunkNumber = 0;
         self.videoSettings = videoSettings;
     }
     return self;
 }
 
-- (void) createWriterInputWith:(CMTime) presentationTimeStamp {
+// MARK: - Public
+- (void)finish {
+    
+    NSURL *url = _chunkOutputURL;
+    AVAssetWriter *chunkAssetWriter = _assetWriter;
+    [self finishAssetWriter:chunkAssetWriter url:url];
+    _assetWriter = nil;
+    _chunkOutputURL = nil;
+    _chunkStartTime = kCMTimeZero;
+}
+
+- (void)clear {
+    _chunkNumber = 0;
+}
+// MARK: - Private
+- (void)createWriterInputWith:(CMTime) presentationTimeStamp {
     
     NSString *outputPath = [[NSString alloc] initWithFormat:@"%@out%06ld.mov", NSTemporaryDirectory(), _chunkNumber];
     NSURL *chunkOutputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
@@ -78,6 +96,18 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     [_assetWriter startSessionAtSourceTime: _chunkStartTime];
 }
 
+- (void)finishAssetWriter:(AVAssetWriter *)assetWriter url:(NSURL *) url {
+    
+    [assetWriter finishWritingWithCompletionHandler:^{
+        NSLog(@"finishWriting says: %ld, error: %@", (long)assetWriter.status, assetWriter.error);
+        if ([self.delegate respondsToSelector:@selector(completedChunkFileURL:)]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate completedChunkFileURL:url];
+            });
+        }
+    }];
+}
+
 // MARK: - OutputSampleBufferDelegate
 - (void)writeSampleBuffer:(CMSampleBufferRef)sampleBuffer ofType:(AVMediaType)mediaType {
     
@@ -88,24 +118,12 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     } else {
         Float64 currentChunkDuration = CMTimeGetSeconds(CMTimeSubtract(presentationTimeStamp, _chunkStartTime));
         
-        if (_chunkNumber >= 4) {
-//            [self stopRecording];
-        }
         if (currentChunkDuration > _chunkDuration) {
             [_assetWriter endSessionAtSourceTime:presentationTimeStamp];
             
-            // make a copy, as finishWriting is asynchronous
-            NSURL *newChunkURL = _chunkOutputURL;
+            NSURL *url = _chunkOutputURL;
             AVAssetWriter *chunkAssetWriter = _assetWriter;
-           
-            [chunkAssetWriter finishWritingWithCompletionHandler:^{
-                
-                NSLog(@"finishWriting says: %ld, error: %@", (long)chunkAssetWriter.status, chunkAssetWriter.error);
-                NSLog(@"url: %@", newChunkURL.absoluteString);
-                // Отправляем на перекодировку
-                //                [self converterFile: newChunkURL number:chunkNumber];
-                
-            }];
+            [self finishAssetWriter:chunkAssetWriter url:url];
             [self createWriterInputWith:presentationTimeStamp];
         }
     }
@@ -113,7 +131,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     if (mediaType == AVMediaTypeAudio) {
         if (_audioAssetWriterInput.readyForMoreMediaData) {
             if (![_audioAssetWriterInput appendSampleBuffer: sampleBuffer]) {
-                NSLog(@"append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+                NSLog(@"audio append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
             }
         }
     } else {

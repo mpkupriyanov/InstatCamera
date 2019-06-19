@@ -1,8 +1,8 @@
 {
   "name": "InstatCamera",
   "version": "0.1.0",
-  "summary": "InstatCamera - video recording by seamless chunks",
-  "description": "Record video by seamless chunks",
+  "summary": "InstatCamera - video recording with seamless chunks by 5 seconds",
+  "description": "Video recording with seamless chunks by 5 seconds",
   "homepage": "https://github.com/mpkupriyanov/InstatCamera",
   "license": {
     "type": "MIT",
