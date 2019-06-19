@@ -6,6 +6,7 @@
 //
 
 #import "Camera.h"
+#import "OutputSampleBufferDelegate.h"
 @import AVFoundation;
 
 @interface Camera () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
@@ -208,16 +209,16 @@
     
     CFRetain(sampleBuffer);
     dispatch_async(_captureSampleBufferQueue, ^{
-        if (self.isRecording) { // && self.delegate != nil
-            if (output == self.videoOutput) {
-//                [self writeSampleBuffer:sampleBuffer ofType:AVMediaTypeVideo];
-            } else if (output == self.audioOutput) {
-//                [self writeSampleBuffer:sampleBuffer ofType:AVMediaTypeAudio];
+        if (self.isRecording) {
+            if ([self.delegate respondsToSelector:@selector(writeSampleBuffer:ofType:)]) {
+                if (output == self.videoOutput) {
+                    [self.delegate writeSampleBuffer:sampleBuffer ofType:AVMediaTypeVideo];
+                } else if (output == self.audioOutput) {
+                    [self.delegate writeSampleBuffer:sampleBuffer ofType:AVMediaTypeAudio];
+                }
             }
         }
         CFRelease(sampleBuffer);
     });
 }
-
-
 @end
