@@ -2,7 +2,7 @@
   "name": "InstatCamera",
   "version": "0.1.0",
   "summary": "InstatCamera - video recording by seamless chunks",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "Record video by seamless chunks",
   "homepage": "https://github.com/mpkupriyanov/InstatCamera",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "InstatCamera/Classes/**/*"
 }

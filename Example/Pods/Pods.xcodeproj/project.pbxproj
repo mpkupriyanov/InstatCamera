@@ -46,34 +46,34 @@
 		3700D486B6E3361778AC232C64D0B418 /* Pods-InstatCamera_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InstatCamera_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3BEAD04DBC5FA168804056569C6143A6 /* InstatCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InstatCamera.xcconfig; sourceTree = "<group>"; };
 		3D10FEA853AE432EF450C8323B3C6E97 /* Pods-InstatCamera_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3F09C454DBB72BDF40EF7594BE8A5D5E /* InstatCamera.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = InstatCamera.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3F09C454DBB72BDF40EF7594BE8A5D5E /* InstatCamera.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = InstatCamera.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3FD1430A5AF69DC0EA63454306DFEEB1 /* Pods-InstatCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
 		42BF2E82278B2CF4A6C4DCFC3F7817B3 /* InstatCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatCamera.h; sourceTree = "<group>"; };
 		4F8B023F89CDE2D91F56E3EEC388E5AC /* InstatCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InstatCamera-dummy.m"; sourceTree = "<group>"; };
 		548956CC509122550B12FFB5D6CAF7E7 /* Camera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
 		5B9B56F8988635C24715FA090D48A62C /* InstatCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-umbrella.h"; sourceTree = "<group>"; };
 		6E714F74836B1B04318E9CA053D13F9C /* Pods-InstatCamera_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7486D9EB899892F27113EF6420AFDA48 /* Pods_InstatCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InstatCamera_Tests.framework; path = "Pods-InstatCamera_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7486D9EB899892F27113EF6420AFDA48 /* Pods_InstatCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstatCamera_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AEC466F862FE745563B83C220C6D9F /* InstatCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-prefix.pch"; sourceTree = "<group>"; };
 		789792E7807C6E1B1910BFBA2A1CC1FE /* Pods-InstatCamera_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InstatCamera_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		811FF7D4883686D450D3BDCDEF91E3B7 /* Pods_InstatCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InstatCamera_Example.framework; path = "Pods-InstatCamera_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		811FF7D4883686D450D3BDCDEF91E3B7 /* Pods_InstatCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstatCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E4F80249D5D45EEB09C937603D97AE /* Pods-InstatCamera_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		897324D3DA30999FF39D0F9961A9A0D3 /* Pods-InstatCamera_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstatCamera_Tests.modulemap"; sourceTree = "<group>"; };
 		89BC7F1D0CF7A28B9764624554A7FFB8 /* Pods-InstatCamera_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstatCamera_Example-umbrella.h"; sourceTree = "<group>"; };
 		9A188027ADE65A23E2D83738A1FEF627 /* Pods-InstatCamera_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstatCamera_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3420A2814AE50B90F82BD6B0ADBC0B1 /* Pods-InstatCamera_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InstatCamera_Example-dummy.m"; sourceTree = "<group>"; };
 		B8814607A80DD66221C9B9171D6988DD /* Pods-InstatCamera_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Tests-Info.plist"; sourceTree = "<group>"; };
 		BFEAF17945D5BE70AB6DC0D6E584CE23 /* InstatCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "InstatCamera-Info.plist"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D0A9B2A5A3A3FD1DA8BC7623F742694E /* InstatCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatCamera.m; sourceTree = "<group>"; };
-		D420EDD7D7CFB4B3DC77AA9F48E7675C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D420EDD7D7CFB4B3DC77AA9F48E7675C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC825A878A256D4A23BE294E6668BB31 /* Camera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		DEA4D2F1EF732A6B23AFB523F0F2F1D6 /* Pods-InstatCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E5030EB739B7DC2C727821D9B7EEEF82 /* InstatCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InstatCamera.framework; path = InstatCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5030EB739B7DC2C727821D9B7EEEF82 /* InstatCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InstatCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56A0306C93595A80F4C20DEEB92AE42 /* Pods-InstatCamera_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstatCamera_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F9957867196795004C8D80F288FC605F /* Pods-InstatCamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FBFD4B02149CBE918668074A24178471 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FBFD4B02149CBE918668074A24178471 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FDDC61916E2D3700E9102CC54F2F4C57 /* Pods-InstatCamera_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Example-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -347,10 +347,11 @@
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 0954A4A05376E6B935048FAF8CCEDAA3 /* Products */;
@@ -433,37 +434,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1932B7B313E3ABA147B64841D8E8EA9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BEAD04DBC5FA168804056569C6143A6 /* InstatCamera.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/InstatCamera/InstatCamera-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/InstatCamera/InstatCamera-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/InstatCamera/InstatCamera.modulemap";
-				PRODUCT_MODULE_NAME = InstatCamera;
-				PRODUCT_NAME = InstatCamera;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		27E9BE3F9723AC17F104F42E4D61BBCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DEA4D2F1EF732A6B23AFB523F0F2F1D6 /* Pods-InstatCamera_Example.debug.xcconfig */;
@@ -551,8 +521,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -657,10 +626,11 @@
 			};
 			name = Release;
 		};
-		7A4F3BDC663755FDC12EFABD54AA829C /* Debug */ = {
+		893488B8268871623334A91273ABAA9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BEAD04DBC5FA168804056569C6143A6 /* InstatCamera.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -673,7 +643,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/InstatCamera/InstatCamera-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/InstatCamera/InstatCamera-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/InstatCamera/InstatCamera.modulemap";
 				PRODUCT_MODULE_NAME = InstatCamera;
@@ -682,10 +652,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		B2268375131927F740C1F6FE26257696 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -756,6 +727,37 @@
 			};
 			name = Release;
 		};
+		EF058CD168AFFFB787783943012D9EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEAD04DBC5FA168804056569C6143A6 /* InstatCamera.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/InstatCamera/InstatCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/InstatCamera/InstatCamera-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/InstatCamera/InstatCamera.modulemap";
+				PRODUCT_MODULE_NAME = InstatCamera;
+				PRODUCT_NAME = InstatCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -771,8 +773,8 @@
 		6F489F446D698AB0BB1384CC897147CD /* Build configuration list for PBXNativeTarget "InstatCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A4F3BDC663755FDC12EFABD54AA829C /* Debug */,
-				1932B7B313E3ABA147B64841D8E8EA9A /* Release */,
+				EF058CD168AFFFB787783943012D9EA4 /* Debug */,
+				893488B8268871623334A91273ABAA9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

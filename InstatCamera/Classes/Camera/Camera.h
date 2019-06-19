@@ -6,11 +6,22 @@
 //
 
 #import <Foundation/Foundation.h>
+@import AVFoundation.AVCaptureSessionPreset;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Camera : NSObject
+typedef NS_ENUM(NSInteger, CameraStatus) {
+    Success,
+    NotAuthorized,
+    SessionConfigurationFailed
+};
 
+@interface Camera : NSObject
+@property (readonly) CameraStatus status;
+
+- (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
+- (void) startRecording;
+- (void) stopRecording;
 @end
 
 NS_ASSUME_NONNULL_END

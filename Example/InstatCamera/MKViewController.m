@@ -7,18 +7,19 @@
 //
 
 #import "MKViewController.h"
-//#import <InstatCamera/Camera.h>
 #import <InstatCamera/InstatCamera.h>
-@interface MKViewController ()
 
+@interface MKViewController ()
+@property InstatCamera *camera;
 @end
 
 @implementation MKViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    InstatCamera *camera = [[InstatCamera alloc] initWithCaptureSessionPreset:AVCaptureSessionPreset1280x720];
+    self.camera = camera;
 }
 
 @end
