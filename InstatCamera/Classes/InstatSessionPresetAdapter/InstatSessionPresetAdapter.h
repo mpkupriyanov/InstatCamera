@@ -1,5 +1,5 @@
 //
-//  InstatCamera.h
+//  InstatSessionPresetAdapter.h
 //  InstatCamera
 //
 //  Created by Mikhail Kupriyanov on 19/06/2019.
@@ -9,14 +9,12 @@
 @import AVFoundation.AVCaptureSessionPreset;
 #import "InstatSessionPreset.h"
 
-@class AVCaptureSession;
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InstatCamera : NSObject
-@property (nonatomic, readonly) AVCaptureSession *captureSession;
+@interface InstatSessionPresetAdapter : NSObject
 
-- (instancetype)initWithInstatCaptureSessionPreset:(InstatSessionPreset) instatSessionPreset;
++ (AVCaptureSessionPreset)adapteeCaptureSessionPresetWith:(InstatSessionPreset) instatSessionPreset;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -22,6 +22,8 @@
 		CC4E794822BA48E200BA7B7D /* CameraPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E794622BA48E200BA7B7D /* CameraPreview.m */; };
 		CC4E795D22BA6E5500BA7B7D /* WriterImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E795B22BA6E5500BA7B7D /* WriterImpl.h */; };
 		CC4E795E22BA6E5500BA7B7D /* WriterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E795C22BA6E5500BA7B7D /* WriterImpl.m */; };
+		CC4E796422BA7F9D00BA7B7D /* InstatSessionPresetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E796222BA7F9D00BA7B7D /* InstatSessionPresetAdapter.h */; };
+		CC4E796522BA7F9D00BA7B7D /* InstatSessionPresetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E796322BA7F9D00BA7B7D /* InstatSessionPresetAdapter.m */; };
 		E49937E133C07FA645B9C7CB284ADC58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		FF2674AB6F4CF9D6B2561042ED6BDC32 /* Pods-InstatCamera_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89BC7F1D0CF7A28B9764624554A7FFB8 /* Pods-InstatCamera_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -77,6 +79,9 @@
 		CC4E795B22BA6E5500BA7B7D /* WriterImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriterImpl.h; sourceTree = "<group>"; };
 		CC4E795C22BA6E5500BA7B7D /* WriterImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriterImpl.m; sourceTree = "<group>"; };
 		CC4E796022BA77A700BA7B7D /* InstatCameraDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstatCameraDelegate.h; sourceTree = "<group>"; };
+		CC4E796222BA7F9D00BA7B7D /* InstatSessionPresetAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstatSessionPresetAdapter.h; sourceTree = "<group>"; };
+		CC4E796322BA7F9D00BA7B7D /* InstatSessionPresetAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstatSessionPresetAdapter.m; sourceTree = "<group>"; };
+		CC4E796622BA811F00BA7B7D /* InstatSessionPreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstatSessionPreset.h; sourceTree = "<group>"; };
 		D0A9B2A5A3A3FD1DA8BC7623F742694E /* InstatCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatCamera.m; sourceTree = "<group>"; };
 		D420EDD7D7CFB4B3DC77AA9F48E7675C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC825A878A256D4A23BE294E6668BB31 /* Camera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 		1B3A708715299DBBB0EAE00581F23319 /* InstatCamera */ = {
 			isa = PBXGroup;
 			children = (
+				CC4E796122BA7F7300BA7B7D /* InstatSessionPresetAdapter */,
 				CC4E795F22BA779800BA7B7D /* InstatCameraDelegate */,
 				CC4E795822BA6CAA00BA7B7D /* OutputSampleBufferDelegate */,
 				CC4E794922BA5AAD00BA7B7D /* Writer */,
@@ -162,6 +168,7 @@
 		3AA1FD327C9207F59306D6F57F8FFC77 /* InstatCamera */ = {
 			isa = PBXGroup;
 			children = (
+				CC4E796622BA811F00BA7B7D /* InstatSessionPreset.h */,
 				42BF2E82278B2CF4A6C4DCFC3F7817B3 /* InstatCamera.h */,
 				D0A9B2A5A3A3FD1DA8BC7623F742694E /* InstatCamera.m */,
 			);
@@ -266,6 +273,16 @@
 			path = InstatCamera/Classes/InstatCameraDelegate;
 			sourceTree = "<group>";
 		};
+		CC4E796122BA7F7300BA7B7D /* InstatSessionPresetAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E796222BA7F9D00BA7B7D /* InstatSessionPresetAdapter.h */,
+				CC4E796322BA7F9D00BA7B7D /* InstatSessionPresetAdapter.m */,
+			);
+			name = InstatSessionPresetAdapter;
+			path = InstatCamera/Classes/InstatSessionPresetAdapter;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +331,7 @@
 				AAB87CA4B1EF399ADBFB824E4B5B1EAE /* InstatCamera-umbrella.h in Headers */,
 				CC4E795D22BA6E5500BA7B7D /* WriterImpl.h in Headers */,
 				775251A51B17785AC171BEAF99B6880D /* InstatCamera.h in Headers */,
+				CC4E796422BA7F9D00BA7B7D /* InstatSessionPresetAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +478,7 @@
 			files = (
 				74524993F6655CCA1BEF714949850E87 /* Camera.m in Sources */,
 				CC4E794822BA48E200BA7B7D /* CameraPreview.m in Sources */,
+				CC4E796522BA7F9D00BA7B7D /* InstatSessionPresetAdapter.m in Sources */,
 				C1E26EC3691B8B0D48EEA43CB67D5C02 /* InstatCamera-dummy.m in Sources */,
 				7AB1B43B8B60D9FA757803DE2BEBCA48 /* InstatCamera.m in Sources */,
 				CC4E795E22BA6E5500BA7B7D /* WriterImpl.m in Sources */,

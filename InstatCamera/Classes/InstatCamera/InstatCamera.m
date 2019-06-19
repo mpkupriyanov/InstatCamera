@@ -8,18 +8,21 @@
 #import "InstatCamera.h"
 #import "WriterImpl.h"
 #import "Camera.h"
+#import "InstatSessionPresetAdapter.h"
 
 @interface InstatCamera ()
 @property (nonatomic, strong) Camera *camera;
 @property (nonatomic, strong) id<Writer> writer;
+@property (nonatomic, assign) InstatSessionPreset instatSessionPreset;
 @end
 @implementation InstatCamera
 
 // MARK: - Life cycle
-- (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset {
+- (instancetype)initWithInstatCaptureSessionPreset:(InstatSessionPreset) instatSessionPreset {
     self = [super init];
     if (self) {
-        
+        self.instatSessionPreset = instatSessionPreset;
+        AVCaptureSessionPreset sessionPreset = [InstatSessionPresetAdapter adapteeCaptureSessionPresetWith:instatSessionPreset];
         [self setupCameraWith:sessionPreset];
         [self setupWriter];
     }
@@ -42,7 +45,6 @@
 - (void)setupWriter {
     
     WriterImpl *writer = [WriterImpl new];
-    
     self.writer = writer;
 }
 @end
