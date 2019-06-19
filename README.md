@@ -5,6 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/InstatCamera.svg?style=flat)](https://cocoapods.org/pods/InstatCamera)
 [![Platform](https://img.shields.io/cocoapods/p/InstatCamera.svg?style=flat)](https://cocoapods.org/pods/InstatCamera)
 
+
+Video recording by seamless chunks 
+Output:
+out00000.mov
+out00001.mov
+...
+out0000<N>.mov
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
