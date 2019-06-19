@@ -7,7 +7,8 @@
 //
 
 #import "MKViewController.h"
-#import <InstatCamera/Camera.h>
+//#import <InstatCamera/Camera.h>
+#import <InstatCamera/InstatCamera.h>
 @interface MKViewController ()
 
 @end

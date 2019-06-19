@@ -11,6 +11,7 @@
 #endif
 
 #import "Camera.h"
+#import "InstatCamera.h"
 
 FOUNDATION_EXPORT double InstatCameraVersionNumber;
 FOUNDATION_EXPORT const unsigned char InstatCameraVersionString[];
