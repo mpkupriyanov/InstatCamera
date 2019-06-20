@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Video recording with seamless chunks by 5 seconds
+  InstatCamera - video recording with seamless chunks by 5 seconds
                        DESC
 
   s.homepage         = 'https://github.com/mpkupriyanov/InstatCamera'
