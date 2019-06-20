@@ -10,10 +10,12 @@
 #import "Camera.h"
 #import "InstatSessionPresetAdapter.h"
 #import "InstatDefaultVideoSettings.h"
+#import "RecordingTimerImpl.h"
 
 @interface InstatCamera ()
 @property (nonatomic, strong) Camera *camera;
 @property (nonatomic, strong) id<Writer> writer;
+@property (nonatomic, strong) id<RecordingTimer> timer;
 @property (nonatomic, assign) InstatSessionPreset instatSessionPreset;
 @end
 @implementation InstatCamera
@@ -27,8 +29,17 @@
         [self setupCameraWith:sessionPreset];
         [self setupWriterWith:instatSessionPreset];
         self.camera.delegate = self.writer;
+        [self setupRecordingTimer];
     }
     return self;
+}
+
+- (void)dealloc {
+    
+    if (_camera.isRecording) {
+        [_camera stopRecording];
+    }
+    [_timer cancel];
 }
 
 // MARK: - Public
@@ -38,19 +49,25 @@
 
 - (void)setDelegate:(id<InstatCameraDelegate>)delegate {
     _writer.delegate = delegate;
+    _timer.delegate = delegate;
 }
 
 - (void)startRecording {
+    
     [_camera startRecording];
+    [_timer start];
 }
 
 - (void)stopRecording {
+    
     [_camera stopRecording];
     [_writer finish];
+    [_timer cancel];
 }
 
 - (void)clear {
     [_writer clear];
+    [_timer clear];
 }
 
 - (BOOL)isRecording {
@@ -69,5 +86,13 @@
     NSDictionary *defaultVideoSettings = [InstatDefaultVideoSettings videoSettingsWithSessionPreset:instatSessionPreset];
     WriterImpl *writer = [[WriterImpl alloc] initWithVideoSettings:defaultVideoSettings];
     self.writer = writer;
+}
+
+// MARK: - Private : Timer
+
+- (void)setupRecordingTimer {
+    
+    RecordingTimerImpl *timer = [RecordingTimerImpl new];
+    self.timer = timer;
 }
 @end

@@ -49,10 +49,11 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 - (void)clear {
     _chunkNumber = 0;
 }
+
 // MARK: - Private
 - (void)createWriterInputWith:(CMTime) presentationTimeStamp {
     
-    NSString *outputPath = [[NSString alloc] initWithFormat:@"%@out%06ld.mov", NSTemporaryDirectory(), _chunkNumber];
+    NSString *outputPath = [[NSString alloc] initWithFormat:@"%@out%06ld.mov", NSTemporaryDirectory(), (long)_chunkNumber];
     NSURL *chunkOutputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
     _chunkOutputURL = chunkOutputURL;
     NSFileManager *fileManager = [NSFileManager defaultManager];

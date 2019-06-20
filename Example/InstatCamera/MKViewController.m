@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 @property (nonatomic, weak) IBOutlet CameraPreview *cameraPreview;
 @property (weak, nonatomic) IBOutlet UISwitch *shareSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @property (nonatomic, strong) InstatCamera *instatCamera;
 @property (nonatomic, strong) NSMutableArray<NSURL *> *chunkURLArray;
@@ -66,7 +67,6 @@
     if (_instatCamera.isRecording) {
         [_instatCamera stopRecording];
         title = @"Start";
-        _removeButton.enabled = _shareButton.enabled = _chunkURLArray.count > 0;
     } else {
         [_instatCamera startRecording];
         title = @"Stop";
@@ -135,11 +135,16 @@
     
     [_chunkURLArray addObject:file_url];
     // Share all files when stoped recording
-    if (self.instatCamera.isRecording == false
-        && self.shareSwitch.isOn == true) {
-        [self share:self.chunkURLArray];
+    if (_instatCamera.isRecording == false) {
+        if (_shareSwitch.isOn == true) {
+            [self share:_chunkURLArray];
+        }
+        _removeButton.enabled = _shareButton.enabled = _chunkURLArray.count > 0;
     }
-    
     NSLog(@"%@", file_url.absoluteString);
+}
+
+- (void)recordingTime:(NSString *)time {
+    _timerLabel.text = time;
 }
 @end

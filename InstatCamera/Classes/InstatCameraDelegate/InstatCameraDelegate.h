@@ -11,7 +11,8 @@
 
 @protocol InstatCameraDelegate <NSObject>
 
+@optional
 - (void)completedChunkFileURL:(NSURL *) file_url;
-
+- (void)recordingTime:(NSString *)time;
 @end
 #endif /* InstatCameraDelegate_h */
