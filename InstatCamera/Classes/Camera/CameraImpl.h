@@ -1,23 +1,19 @@
 //
-//  Camera.h
-//  Pods
+//  CameraImpl.h
+//  InstatCamera
 //
-//  Created by Mikhail Kupriyanov on 20/06/2019.
+//  Created by Mikhail Kupriyanov on 18/06/2019.
 //
 
-#ifndef Camera_h
-#define Camera_h
+#import <Foundation/Foundation.h>
+#import "Camera.h"
 @import AVFoundation.AVCaptureSessionPreset;
 @protocol OutputSampleBufferDelegate;
 @class AVCaptureSession;
 
-typedef NS_ENUM(NSInteger, CameraStatus) {
-    Success,
-    NotAuthorized,
-    SessionConfigurationFailed
-};
+NS_ASSUME_NONNULL_BEGIN
 
-@protocol Camera <NSObject>
+@interface CameraImpl : NSObject <Camera>
 @property (nonatomic, readonly) AVCaptureSession* session;
 @property (nonatomic, readonly) CameraStatus status;
 @property (nonatomic, assign, readonly) BOOL isRecording;
@@ -27,4 +23,5 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 - (void) startRecording;
 - (void) stopRecording;
 @end
-#endif /* Camera_h */
+
+NS_ASSUME_NONNULL_END

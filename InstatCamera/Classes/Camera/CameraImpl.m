@@ -1,15 +1,15 @@
 //
-//  Camera.m
+//  CameraImpl.m
 //  InstatCamera
 //
 //  Created by Mikhail Kupriyanov on 18/06/2019.
 //
 
-#import "Camera.h"
+#import "CameraImpl.h"
 #import "OutputSampleBufferDelegate.h"
 @import AVFoundation;
 
-@interface Camera () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
+@interface CameraImpl () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
 @property (nonatomic, assign, readwrite) BOOL isRecording;
@@ -21,7 +21,7 @@
 @property (nonatomic, strong) AVCaptureAudioDataOutput *audioOutput;
 
 @end
-@implementation Camera
+@implementation CameraImpl
 
 // MARK: - Life cycle
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset)sessionPreset {

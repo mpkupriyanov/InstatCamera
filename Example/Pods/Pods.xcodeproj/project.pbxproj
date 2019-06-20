@@ -8,34 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		0065F5E5DD83FA66A2E4B0E5458DBF5E /* Pods-InstatCamera_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A345CB93B106F0FC6D2A1623D7955EB /* Pods-InstatCamera_Tests-dummy.m */; };
-		009BA307A9289F605A1DBD7120B22D03 /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD24B16CC14C11E452B6F15786C60C5 /* Camera.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		063A2F3980397257444FB61CE5162F6A /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = C20A3CC30A844AC1F0B7807462821A78 /* Camera.m */; };
-		0E05624970172E9ED58C90A2AE4EB0F1 /* InstatDefaultVideoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A99E48A4E71DD41B0E85058EDCCF33F2 /* InstatDefaultVideoSettings.m */; };
+		025A4568EFF948B03F23EFBCA6F82173 /* RecordingTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = D9ECFB4083803AEE7160A700C0396969 /* RecordingTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BAA1143418F6A82F2D32B727D1ADAB /* InstatCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67267AF14CC25C598B916D3F8116198C /* InstatCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C0D33ACB448BC0A989F7353D3642B8 /* RecordingTimerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E92E15B897F1CD32821544EFBAAA7 /* RecordingTimerImpl.m */; };
+		091DE65759951C8B8CD4679CA568EEB6 /* Writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE63B088D6ECFD995CE7610C3007E72 /* Writer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CC273F71CFD21222B2D1FF18AA73184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		10A4EF1076296607C837AAE229AC7C31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		2181092D2225F90771F43B03D8158F9D /* WriterImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C7ED559BF536D7F9BB36230C81AB45 /* WriterImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A77055E04790D8545E7DFD861039296 /* InstatCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67570B3336E78079ECA708C68D4207A /* InstatCamera-dummy.m */; };
-		2EFCD2BEA37EA48AAFD251EFF96675D7 /* InstatCameraDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC0F8A425180BE9465EB102CCD9DC8B /* InstatCameraDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2A7920EC2EFE13D58BE98F3F05DC37 /* InstatSessionPresetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E03062BA265F8E373F846CAC7AC31FE2 /* InstatSessionPresetAdapter.m */; };
-		442E25A21A4C93EEBFA0CC3D4BCEF4D1 /* OutputSampleBufferDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 556B26630F827841019CFC237BCB3E0C /* OutputSampleBufferDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CE31441729FC3644066BA02C1E347A8 /* InstatCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CEC28A114D3CB179DB2711F55243F /* InstatCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56F7F3FCA29ECEA2DA0F61DE20EFD2F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		61533F1436842124B20946056C817139 /* CameraPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B699DDCC1D8CC88EA71E6DD4379AA6A /* CameraPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70B0EAD5A20EFB9BDB20068D3B210F6C /* CameraPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F3DBAFA37520721D5789211DBEEA1 /* CameraPreview.m */; };
-		7134068BB439DB66E8CE3E1382287E2E /* WriterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3A00B2416E648197B1CDF84667930 /* WriterImpl.m */; };
+		22AA4007B5318C69A45A274637DBA526 /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF8EE94487A7975962F939BE825C18D /* Camera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		276ACFCCE662E79E977D7DE375BE2512 /* MKTimerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1965BE64EBC5FDC2024D006F32E7D63 /* MKTimerImpl.m */; };
+		2D7A474D170E89505C06AC03875C1E36 /* InstatCameraDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E196E948B7D66A73D20EA86A679E62F /* InstatCameraDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E1C52B514CCB4AB9BDFA5C77F436E2D /* RecordingTimerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFBE0A1F014ECEA6CF0CE2BCDEF31C0 /* RecordingTimerImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55FDAF4B2A438DD8F58C11AEA0097DF3 /* InstatDefaultVideoSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = F73586E62D42D855751455F3CCD3B384 /* InstatDefaultVideoSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67ED7D4F023AB5B91AECDD584A3EDEA9 /* WriterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9916AAAD08EA75AED9A984FC90072 /* WriterImpl.m */; };
+		69B77F12AAF1231CC38560A953BA7F15 /* InstatCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF56A9ACCC7ABFD70C5B634BE04A164 /* InstatCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75CF52BDC4FA793B9270139F689DF2A5 /* InstatDefaultVideoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A34039486B8CAEA4DB0A9D78BB5F5A7F /* InstatDefaultVideoSettings.m */; };
 		87BBE861D52FCDDBAF10569B1FCA7518 /* Pods-InstatCamera_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E56A0306C93595A80F4C20DEEB92AE42 /* Pods-InstatCamera_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88A4E5A74271F404600D1B3F869A77B7 /* Pods-InstatCamera_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3420A2814AE50B90F82BD6B0ADBC0B1 /* Pods-InstatCamera_Example-dummy.m */; };
-		892F17C6DCA1F23E5043EAB7A7BB90E4 /* InstatCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B04C3331865FCEA3A477D7F17B759EFA /* InstatCamera.m */; };
-		8A20E3123891A5233C2F9AA1B072E7CA /* InstatSessionPresetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D831278CB59BE4995558D353F1C1C89 /* InstatSessionPresetAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB4273D93F9EE67F84844927277B904D /* InstatSessionPreset.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B9BDEA55ED2C703A00BACABCBF1CD8 /* InstatSessionPreset.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC4E79CD22BB771B00BA7B7D /* MKTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E79CA22BB771B00BA7B7D /* MKTimer.h */; };
-		CC4E79CE22BB771B00BA7B7D /* MKTimerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79CB22BB771B00BA7B7D /* MKTimerImpl.m */; };
-		CC4E79CF22BB771B00BA7B7D /* MKTimerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E79CC22BB771B00BA7B7D /* MKTimerImpl.h */; };
-		CC4E79D322BB774300BA7B7D /* RecordingTimerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E79D122BB774300BA7B7D /* RecordingTimerImpl.h */; };
-		CC4E79D422BB774300BA7B7D /* RecordingTimerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79D222BB774300BA7B7D /* RecordingTimerImpl.m */; };
+		8C8D369B5399CE4E0A2F4177F1EEB067 /* WriterImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF7D341706D6B000EC04EF64D915249 /* WriterImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93AFACC0A1E4AE608B03DF1679C84AC9 /* InstatSessionPresetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 674F32CE953E6EF3107F7BF472ECE999 /* InstatSessionPresetAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0162C51A20146F3654AE1B3D64280CA /* InstatCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E18384EFC4BCF9B50EF9AFF54D5D9A2C /* InstatCamera-dummy.m */; };
+		A5A3E4736D17EEBF6C8EC2909A027A59 /* InstatSessionPreset.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9D9B9F5E8006CA4B62E2C58427416B /* InstatSessionPreset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA00E383D9249B2FB688D43E32F76C9D /* CameraPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB3AAE5649373DF785034B312C6184B /* CameraPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA5593C31D322103E7C7F2CAC873AB5C /* InstatSessionPresetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D759274976771080C897427E002C55 /* InstatSessionPresetAdapter.m */; };
+		DF41F84022812CAD0C89A6447B34E68B /* CameraPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F447C0F366333C2211B0A4FAA7E335 /* CameraPreview.m */; };
+		E1706281D739B1925653F7EE7A55F9C3 /* MKTimerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F577AF1072219836E1F77CD7C0A2DB /* MKTimerImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E308B9C7DA84FE9434326F63B202389D /* OutputSampleBufferDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0636C0DA2813FF3484E064211211B072 /* OutputSampleBufferDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E49937E133C07FA645B9C7CB284ADC58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		E939CF78209C4A2E7ADA4B2647E3FDDA /* InstatCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = DE475BA34734A5BEE966CACD219C5D2E /* InstatCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED07D3794A21A9903E24FABE07A6F430 /* InstatDefaultVideoSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF563D5251173148075BE9E28D88053 /* InstatDefaultVideoSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E06ABDCCD6C6D1CC036AB41819F071 /* Writer.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E0F9CDF7EF1B47B2E01AAACED0EC4F /* Writer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC137FED65246FBBF3ADBFEFC8248755 /* InstatCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 84022ED8924498FBBCCA22CDDF7AD66E /* InstatCamera.m */; };
+		F5C70105A5C3362964E71D9C834DF679 /* CameraImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC65B45881861EF2EB089818F90E80A /* CameraImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBBE7E670C3192CF6E98BD5F7EA9EE6D /* MKTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 653FA02A705C856CAB512459EC1AFFC7 /* MKTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDFF326C77856BC5FCFEC66F049943D7 /* CameraImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A14E97B810C4835584D4F81A18235C91 /* CameraImpl.m */; };
 		FF2674AB6F4CF9D6B2561042ED6BDC32 /* Pods-InstatCamera_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89BC7F1D0CF7A28B9764624554A7FFB8 /* Pods-InstatCamera_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7A2486C8178FC5A2820F78D39726FC3A;
+			remoteGlobalIDString = 6BFEB0E1F74C45C7D74549CD71D6DCE0;
 			remoteInfo = InstatCamera;
 		};
 		80BECDE8188D035E3EF374D6CF39F604 /* PBXContainerItemProxy */ = {
@@ -58,58 +60,59 @@
 
 /* Begin PBXFileReference section */
 		04FA08AB76190B2317F3771D280E5D11 /* Pods-InstatCamera_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InstatCamera_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		199CEEA05312A213D7236CF8A11C6BDF /* InstatCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = InstatCamera.modulemap; sourceTree = "<group>"; };
-		1B699DDCC1D8CC88EA71E6DD4379AA6A /* CameraPreview.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CameraPreview.h; sourceTree = "<group>"; };
+		0636C0DA2813FF3484E064211211B072 /* OutputSampleBufferDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OutputSampleBufferDelegate.h; sourceTree = "<group>"; };
+		11AB619D0421FC80938288375B6D8C1B /* InstatCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = InstatCamera.modulemap; sourceTree = "<group>"; };
+		1416DEAFAF075B7819AFCA4700E09BB1 /* InstatCamera.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = InstatCamera.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1EE63B088D6ECFD995CE7610C3007E72 /* Writer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Writer.h; sourceTree = "<group>"; };
 		2A345CB93B106F0FC6D2A1623D7955EB /* Pods-InstatCamera_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InstatCamera_Tests-dummy.m"; sourceTree = "<group>"; };
-		2DC0F8A425180BE9465EB102CCD9DC8B /* InstatCameraDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatCameraDelegate.h; sourceTree = "<group>"; };
-		319B89C0E14826769BEBF80FE2A0BDC9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		345CEC28A114D3CB179DB2711F55243F /* InstatCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-umbrella.h"; sourceTree = "<group>"; };
+		2AF56A9ACCC7ABFD70C5B634BE04A164 /* InstatCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatCamera.h; sourceTree = "<group>"; };
+		2AF84B8A1D3976DEB72127E329BB2685 /* InstatCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "InstatCamera-Info.plist"; sourceTree = "<group>"; };
 		3700D486B6E3361778AC232C64D0B418 /* Pods-InstatCamera_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InstatCamera_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3D10FEA853AE432EF450C8323B3C6E97 /* Pods-InstatCamera_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3DD24B16CC14C11E452B6F15786C60C5 /* Camera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		3FB3AAE5649373DF785034B312C6184B /* CameraPreview.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CameraPreview.h; sourceTree = "<group>"; };
 		3FD1430A5AF69DC0EA63454306DFEEB1 /* Pods-InstatCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
-		556B26630F827841019CFC237BCB3E0C /* OutputSampleBufferDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OutputSampleBufferDelegate.h; sourceTree = "<group>"; };
-		57C06C595490B43BFE284EAD2BAF5C00 /* InstatCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InstatCamera.xcconfig; sourceTree = "<group>"; };
-		5E3F3DBAFA37520721D5789211DBEEA1 /* CameraPreview.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CameraPreview.m; sourceTree = "<group>"; };
-		609FDEE216C9EAB47F23300B8E2421B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		6B5EEC58FA00B82BB4D1CD390CCE380C /* InstatCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-prefix.pch"; sourceTree = "<group>"; };
-		6D831278CB59BE4995558D353F1C1C89 /* InstatSessionPresetAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatSessionPresetAdapter.h; sourceTree = "<group>"; };
+		4702E4A05B9C14CEB6EF723FA1B9131E /* InstatCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InstatCamera.xcconfig; sourceTree = "<group>"; };
+		4DF9916AAAD08EA75AED9A984FC90072 /* WriterImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WriterImpl.m; sourceTree = "<group>"; };
+		4EF8EE94487A7975962F939BE825C18D /* Camera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		5D9E92E15B897F1CD32821544EFBAAA7 /* RecordingTimerImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RecordingTimerImpl.m; sourceTree = "<group>"; };
+		653FA02A705C856CAB512459EC1AFFC7 /* MKTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKTimer.h; sourceTree = "<group>"; };
+		65D759274976771080C897427E002C55 /* InstatSessionPresetAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatSessionPresetAdapter.m; sourceTree = "<group>"; };
+		67267AF14CC25C598B916D3F8116198C /* InstatCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-umbrella.h"; sourceTree = "<group>"; };
+		674F32CE953E6EF3107F7BF472ECE999 /* InstatSessionPresetAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatSessionPresetAdapter.h; sourceTree = "<group>"; };
+		6BAA450816CFCA3012BA7EEB96BD9E1E /* InstatCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InstatCamera-prefix.pch"; sourceTree = "<group>"; };
 		6E714F74836B1B04318E9CA053D13F9C /* Pods-InstatCamera_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7486D9EB899892F27113EF6420AFDA48 /* Pods_InstatCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstatCamera_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		789792E7807C6E1B1910BFBA2A1CC1FE /* Pods-InstatCamera_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InstatCamera_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7EF563D5251173148075BE9E28D88053 /* InstatDefaultVideoSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatDefaultVideoSettings.h; sourceTree = "<group>"; };
+		79F577AF1072219836E1F77CD7C0A2DB /* MKTimerImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKTimerImpl.h; sourceTree = "<group>"; };
 		811FF7D4883686D450D3BDCDEF91E3B7 /* Pods_InstatCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstatCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E4F80249D5D45EEB09C937603D97AE /* Pods-InstatCamera_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		86C7ED559BF536D7F9BB36230C81AB45 /* WriterImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WriterImpl.h; sourceTree = "<group>"; };
+		84022ED8924498FBBCCA22CDDF7AD66E /* InstatCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatCamera.m; sourceTree = "<group>"; };
 		897324D3DA30999FF39D0F9961A9A0D3 /* Pods-InstatCamera_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstatCamera_Tests.modulemap"; sourceTree = "<group>"; };
 		89BC7F1D0CF7A28B9764624554A7FFB8 /* Pods-InstatCamera_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstatCamera_Example-umbrella.h"; sourceTree = "<group>"; };
 		9A188027ADE65A23E2D83738A1FEF627 /* Pods-InstatCamera_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstatCamera_Example.modulemap"; sourceTree = "<group>"; };
+		9C9D9B9F5E8006CA4B62E2C58427416B /* InstatSessionPreset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatSessionPreset.h; sourceTree = "<group>"; };
+		9CC5685821EAB6924E54FDB834A3B43D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E196E948B7D66A73D20EA86A679E62F /* InstatCameraDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatCameraDelegate.h; sourceTree = "<group>"; };
+		A14E97B810C4835584D4F81A18235C91 /* CameraImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CameraImpl.m; sourceTree = "<group>"; };
+		A34039486B8CAEA4DB0A9D78BB5F5A7F /* InstatDefaultVideoSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatDefaultVideoSettings.m; sourceTree = "<group>"; };
 		A3420A2814AE50B90F82BD6B0ADBC0B1 /* Pods-InstatCamera_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InstatCamera_Example-dummy.m"; sourceTree = "<group>"; };
-		A99E48A4E71DD41B0E85058EDCCF33F2 /* InstatDefaultVideoSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatDefaultVideoSettings.m; sourceTree = "<group>"; };
-		B04C3331865FCEA3A477D7F17B759EFA /* InstatCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatCamera.m; sourceTree = "<group>"; };
-		B67570B3336E78079ECA708C68D4207A /* InstatCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InstatCamera-dummy.m"; sourceTree = "<group>"; };
+		A490A22DB4E3DBF6C7C498A177C2AED8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B8814607A80DD66221C9B9171D6988DD /* Pods-InstatCamera_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Tests-Info.plist"; sourceTree = "<group>"; };
-		C0B9BDEA55ED2C703A00BACABCBF1CD8 /* InstatSessionPreset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatSessionPreset.h; sourceTree = "<group>"; };
-		C20A3CC30A844AC1F0B7807462821A78 /* Camera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
-		CAB2F97BB287E3C6797C2F69826867EA /* InstatCamera.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = InstatCamera.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CC4E79CA22BB771B00BA7B7D /* MKTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTimer.h; sourceTree = "<group>"; };
-		CC4E79CB22BB771B00BA7B7D /* MKTimerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTimerImpl.m; sourceTree = "<group>"; };
-		CC4E79CC22BB771B00BA7B7D /* MKTimerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTimerImpl.h; sourceTree = "<group>"; };
-		CC4E79D022BB773500BA7B7D /* RecordingTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordingTimer.h; sourceTree = "<group>"; };
-		CC4E79D122BB774300BA7B7D /* RecordingTimerImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordingTimerImpl.h; sourceTree = "<group>"; };
-		CC4E79D222BB774300BA7B7D /* RecordingTimerImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordingTimerImpl.m; sourceTree = "<group>"; };
-		D53317D9617F641524085D1DE0E0201C /* InstatCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "InstatCamera-Info.plist"; sourceTree = "<group>"; };
-		DE475BA34734A5BEE966CACD219C5D2E /* InstatCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatCamera.h; sourceTree = "<group>"; };
+		CCFBE0A1F014ECEA6CF0CE2BCDEF31C0 /* RecordingTimerImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RecordingTimerImpl.h; sourceTree = "<group>"; };
+		D9ECFB4083803AEE7160A700C0396969 /* RecordingTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RecordingTimer.h; sourceTree = "<group>"; };
+		DCC65B45881861EF2EB089818F90E80A /* CameraImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CameraImpl.h; sourceTree = "<group>"; };
 		DEA4D2F1EF732A6B23AFB523F0F2F1D6 /* Pods-InstatCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E03062BA265F8E373F846CAC7AC31FE2 /* InstatSessionPresetAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InstatSessionPresetAdapter.m; sourceTree = "<group>"; };
-		E1E0F9CDF7EF1B47B2E01AAACED0EC4F /* Writer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Writer.h; sourceTree = "<group>"; };
+		E18384EFC4BCF9B50EF9AFF54D5D9A2C /* InstatCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InstatCamera-dummy.m"; sourceTree = "<group>"; };
+		E1965BE64EBC5FDC2024D006F32E7D63 /* MKTimerImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKTimerImpl.m; sourceTree = "<group>"; };
 		E5030EB739B7DC2C727821D9B7EEEF82 /* InstatCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InstatCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56A0306C93595A80F4C20DEEB92AE42 /* Pods-InstatCamera_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstatCamera_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F2F447C0F366333C2211B0A4FAA7E335 /* CameraPreview.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CameraPreview.m; sourceTree = "<group>"; };
+		F73586E62D42D855751455F3CCD3B384 /* InstatDefaultVideoSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InstatDefaultVideoSettings.h; sourceTree = "<group>"; };
 		F9957867196795004C8D80F288FC605F /* Pods-InstatCamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstatCamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FCF7D341706D6B000EC04EF64D915249 /* WriterImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WriterImpl.h; sourceTree = "<group>"; };
 		FDDC61916E2D3700E9102CC54F2F4C57 /* Pods-InstatCamera_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstatCamera_Example-Info.plist"; sourceTree = "<group>"; };
-		FDE3A00B2416E648197B1CDF84667930 /* WriterImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WriterImpl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,37 +132,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D437BA1BD790ABFBDAE69865BD4EA1B8 /* Frameworks */ = {
+		BAEFABFC9E7414EC47940C8C639FB67A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56F7F3FCA29ECEA2DA0F61DE20EFD2F4 /* Foundation.framework in Frameworks */,
+				0CC273F71CFD21222B2D1FF18AA73184 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08A74E9EE785D5F872046931D5D1BAAA /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				3DD24B16CC14C11E452B6F15786C60C5 /* Camera.h */,
-				C20A3CC30A844AC1F0B7807462821A78 /* Camera.m */,
-			);
-			name = Camera;
-			path = InstatCamera/Classes/Camera;
-			sourceTree = "<group>";
-		};
-		09455BAAF3F940B9F12BE2D97EB07B1F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CAB2F97BB287E3C6797C2F69826867EA /* InstatCamera.podspec */,
-				609FDEE216C9EAB47F23300B8E2421B8 /* LICENSE */,
-				319B89C0E14826769BEBF80FE2A0BDC9 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		0954A4A05376E6B935048FAF8CCEDAA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,42 +151,6 @@
 				7486D9EB899892F27113EF6420AFDA48 /* Pods_InstatCamera_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0C00121532AD32BC12B4E6764BB757DA /* InstatCamera */ = {
-			isa = PBXGroup;
-			children = (
-				CC4E79C822BB771B00BA7B7D /* RecordingTimer */,
-				08A74E9EE785D5F872046931D5D1BAAA /* Camera */,
-				36A0335DE989C6BB4D855AB9B86C4F71 /* CameraPreview */,
-				823D31081C4EF12ADBB13A070893F464 /* InstatCamera */,
-				8B9E0100D211C16DEA27D91B872E119F /* InstatCameraDelegate */,
-				236638F70DA5AEF1B52D7FE4C88A6A04 /* InstatDefaultVideoSettings */,
-				5C262C8289CEE52F51CD257D4AE38FB8 /* InstatSessionPresetAdapter */,
-				0CF3B7C85F137BDED21DF9648CDA8867 /* OutputSampleBufferDelegate */,
-				09455BAAF3F940B9F12BE2D97EB07B1F /* Pod */,
-				FE5E3A5E77C4E98F43523D6C960B4DCD /* Support Files */,
-				7E615E7FED8F23FE467BA7DA90B64E93 /* Writer */,
-			);
-			name = InstatCamera;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		0CF3B7C85F137BDED21DF9648CDA8867 /* OutputSampleBufferDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				556B26630F827841019CFC237BCB3E0C /* OutputSampleBufferDelegate.h */,
-			);
-			name = OutputSampleBufferDelegate;
-			path = InstatCamera/Classes/OutputSampleBufferDelegate;
-			sourceTree = "<group>";
-		};
-		1249ADEA7A27776705F6EAF53AC8FD8E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0C00121532AD32BC12B4E6764BB757DA /* InstatCamera */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		15DD6972BF447267E36227F46D2EA5B3 /* Targets Support Files */ = {
@@ -215,65 +162,88 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		236638F70DA5AEF1B52D7FE4C88A6A04 /* InstatDefaultVideoSettings */ = {
+		17F3EB5BD1A6209C69FF95D306599540 /* InstatSessionPresetAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				7EF563D5251173148075BE9E28D88053 /* InstatDefaultVideoSettings.h */,
-				A99E48A4E71DD41B0E85058EDCCF33F2 /* InstatDefaultVideoSettings.m */,
-			);
-			name = InstatDefaultVideoSettings;
-			path = InstatCamera/Classes/InstatDefaultVideoSettings;
-			sourceTree = "<group>";
-		};
-		36A0335DE989C6BB4D855AB9B86C4F71 /* CameraPreview */ = {
-			isa = PBXGroup;
-			children = (
-				1B699DDCC1D8CC88EA71E6DD4379AA6A /* CameraPreview.h */,
-				5E3F3DBAFA37520721D5789211DBEEA1 /* CameraPreview.m */,
-			);
-			name = CameraPreview;
-			path = InstatCamera/Classes/CameraPreview;
-			sourceTree = "<group>";
-		};
-		5C262C8289CEE52F51CD257D4AE38FB8 /* InstatSessionPresetAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				6D831278CB59BE4995558D353F1C1C89 /* InstatSessionPresetAdapter.h */,
-				E03062BA265F8E373F846CAC7AC31FE2 /* InstatSessionPresetAdapter.m */,
+				674F32CE953E6EF3107F7BF472ECE999 /* InstatSessionPresetAdapter.h */,
+				65D759274976771080C897427E002C55 /* InstatSessionPresetAdapter.m */,
 			);
 			name = InstatSessionPresetAdapter;
 			path = InstatCamera/Classes/InstatSessionPresetAdapter;
 			sourceTree = "<group>";
 		};
-		7E615E7FED8F23FE467BA7DA90B64E93 /* Writer */ = {
+		36B56AE9187653700A311C68A445072A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E1E0F9CDF7EF1B47B2E01AAACED0EC4F /* Writer.h */,
-				86C7ED559BF536D7F9BB36230C81AB45 /* WriterImpl.h */,
-				FDE3A00B2416E648197B1CDF84667930 /* WriterImpl.m */,
+				1416DEAFAF075B7819AFCA4700E09BB1 /* InstatCamera.podspec */,
+				A490A22DB4E3DBF6C7C498A177C2AED8 /* LICENSE */,
+				9CC5685821EAB6924E54FDB834A3B43D /* README.md */,
 			);
-			name = Writer;
-			path = InstatCamera/Classes/Writer;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		823D31081C4EF12ADBB13A070893F464 /* InstatCamera */ = {
+		4BF3FC423A612B0ABF032110271355EE /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				DE475BA34734A5BEE966CACD219C5D2E /* InstatCamera.h */,
-				B04C3331865FCEA3A477D7F17B759EFA /* InstatCamera.m */,
-				C0B9BDEA55ED2C703A00BACABCBF1CD8 /* InstatSessionPreset.h */,
+				653FA02A705C856CAB512459EC1AFFC7 /* MKTimer.h */,
+				79F577AF1072219836E1F77CD7C0A2DB /* MKTimerImpl.h */,
+				E1965BE64EBC5FDC2024D006F32E7D63 /* MKTimerImpl.m */,
 			);
-			name = InstatCamera;
-			path = InstatCamera/Classes/InstatCamera;
+			path = Timer;
 			sourceTree = "<group>";
 		};
-		8B9E0100D211C16DEA27D91B872E119F /* InstatCameraDelegate */ = {
+		6638788DB568AD19B84370192882B7E9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2DC0F8A425180BE9465EB102CCD9DC8B /* InstatCameraDelegate.h */,
+				CBA07E83441B59875318AAB55ED84E05 /* InstatCamera */,
 			);
-			name = InstatCameraDelegate;
-			path = InstatCamera/Classes/InstatCameraDelegate;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		670A55FF28AC869C29A1773220EACEDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				11AB619D0421FC80938288375B6D8C1B /* InstatCamera.modulemap */,
+				4702E4A05B9C14CEB6EF723FA1B9131E /* InstatCamera.xcconfig */,
+				E18384EFC4BCF9B50EF9AFF54D5D9A2C /* InstatCamera-dummy.m */,
+				2AF84B8A1D3976DEB72127E329BB2685 /* InstatCamera-Info.plist */,
+				6BAA450816CFCA3012BA7EEB96BD9E1E /* InstatCamera-prefix.pch */,
+				67267AF14CC25C598B916D3F8116198C /* InstatCamera-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/InstatCamera";
+			sourceTree = "<group>";
+		};
+		782A1161A1548F0DBA69DCDD84BC80E6 /* OutputSampleBufferDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0636C0DA2813FF3484E064211211B072 /* OutputSampleBufferDelegate.h */,
+			);
+			name = OutputSampleBufferDelegate;
+			path = InstatCamera/Classes/OutputSampleBufferDelegate;
+			sourceTree = "<group>";
+		};
+		79FAF30D0DF4CBD6BE78CD0441C12AB9 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				4EF8EE94487A7975962F939BE825C18D /* Camera.h */,
+				DCC65B45881861EF2EB089818F90E80A /* CameraImpl.h */,
+				A14E97B810C4835584D4F81A18235C91 /* CameraImpl.m */,
+			);
+			name = Camera;
+			path = InstatCamera/Classes/Camera;
+			sourceTree = "<group>";
+		};
+		8D8CC80BBBC618888846219738475352 /* RecordingTimer */ = {
+			isa = PBXGroup;
+			children = (
+				D9ECFB4083803AEE7160A700C0396969 /* RecordingTimer.h */,
+				CCFBE0A1F014ECEA6CF0CE2BCDEF31C0 /* RecordingTimerImpl.h */,
+				5D9E92E15B897F1CD32821544EFBAAA7 /* RecordingTimerImpl.m */,
+				4BF3FC423A612B0ABF032110271355EE /* Timer */,
+			);
+			name = RecordingTimer;
+			path = InstatCamera/Classes/RecordingTimer;
 			sourceTree = "<group>";
 		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
@@ -282,6 +252,46 @@
 				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		9D24E90294B35E0038DF72392F081478 /* InstatCameraDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9E196E948B7D66A73D20EA86A679E62F /* InstatCameraDelegate.h */,
+			);
+			name = InstatCameraDelegate;
+			path = InstatCamera/Classes/InstatCameraDelegate;
+			sourceTree = "<group>";
+		};
+		A34C09637B6A9D447EA274B23716B68A /* InstatCamera */ = {
+			isa = PBXGroup;
+			children = (
+				2AF56A9ACCC7ABFD70C5B634BE04A164 /* InstatCamera.h */,
+				84022ED8924498FBBCCA22CDDF7AD66E /* InstatCamera.m */,
+				9C9D9B9F5E8006CA4B62E2C58427416B /* InstatSessionPreset.h */,
+			);
+			name = InstatCamera;
+			path = InstatCamera/Classes/InstatCamera;
+			sourceTree = "<group>";
+		};
+		B8B8971CEF6DFBEB68910CAC937FFCFE /* InstatDefaultVideoSettings */ = {
+			isa = PBXGroup;
+			children = (
+				F73586E62D42D855751455F3CCD3B384 /* InstatDefaultVideoSettings.h */,
+				A34039486B8CAEA4DB0A9D78BB5F5A7F /* InstatDefaultVideoSettings.m */,
+			);
+			name = InstatDefaultVideoSettings;
+			path = InstatCamera/Classes/InstatDefaultVideoSettings;
+			sourceTree = "<group>";
+		};
+		C66D20C71450052D610515AFF0B5970E /* CameraPreview */ = {
+			isa = PBXGroup;
+			children = (
+				3FB3AAE5649373DF785034B312C6184B /* CameraPreview.h */,
+				F2F447C0F366333C2211B0A4FAA7E335 /* CameraPreview.m */,
+			);
+			name = CameraPreview;
+			path = InstatCamera/Classes/CameraPreview;
 			sourceTree = "<group>";
 		};
 		C6C4865F7FCC8FFD03E29042C6461179 /* Pods-InstatCamera_Tests */ = {
@@ -300,33 +310,30 @@
 			path = "Target Support Files/Pods-InstatCamera_Tests";
 			sourceTree = "<group>";
 		};
-		CC4E79C822BB771B00BA7B7D /* RecordingTimer */ = {
+		CBA07E83441B59875318AAB55ED84E05 /* InstatCamera */ = {
 			isa = PBXGroup;
 			children = (
-				CC4E79C922BB771B00BA7B7D /* Timer */,
-				CC4E79D022BB773500BA7B7D /* RecordingTimer.h */,
-				CC4E79D122BB774300BA7B7D /* RecordingTimerImpl.h */,
-				CC4E79D222BB774300BA7B7D /* RecordingTimerImpl.m */,
+				79FAF30D0DF4CBD6BE78CD0441C12AB9 /* Camera */,
+				C66D20C71450052D610515AFF0B5970E /* CameraPreview */,
+				A34C09637B6A9D447EA274B23716B68A /* InstatCamera */,
+				9D24E90294B35E0038DF72392F081478 /* InstatCameraDelegate */,
+				B8B8971CEF6DFBEB68910CAC937FFCFE /* InstatDefaultVideoSettings */,
+				17F3EB5BD1A6209C69FF95D306599540 /* InstatSessionPresetAdapter */,
+				782A1161A1548F0DBA69DCDD84BC80E6 /* OutputSampleBufferDelegate */,
+				36B56AE9187653700A311C68A445072A /* Pod */,
+				8D8CC80BBBC618888846219738475352 /* RecordingTimer */,
+				670A55FF28AC869C29A1773220EACEDC /* Support Files */,
+				E2EF980F9E863920CEDD9957A2963C23 /* Writer */,
 			);
-			name = RecordingTimer;
-			path = InstatCamera/Classes/RecordingTimer;
-			sourceTree = "<group>";
-		};
-		CC4E79C922BB771B00BA7B7D /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				CC4E79CA22BB771B00BA7B7D /* MKTimer.h */,
-				CC4E79CC22BB771B00BA7B7D /* MKTimerImpl.h */,
-				CC4E79CB22BB771B00BA7B7D /* MKTimerImpl.m */,
-			);
-			path = Timer;
+			name = InstatCamera;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1249ADEA7A27776705F6EAF53AC8FD8E /* Development Pods */,
+				6638788DB568AD19B84370192882B7E9 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				0954A4A05376E6B935048FAF8CCEDAA3 /* Products */,
 				15DD6972BF447267E36227F46D2EA5B3 /* Targets Support Files */,
@@ -358,49 +365,48 @@
 			path = "Target Support Files/Pods-InstatCamera_Example";
 			sourceTree = "<group>";
 		};
-		FE5E3A5E77C4E98F43523D6C960B4DCD /* Support Files */ = {
+		E2EF980F9E863920CEDD9957A2963C23 /* Writer */ = {
 			isa = PBXGroup;
 			children = (
-				199CEEA05312A213D7236CF8A11C6BDF /* InstatCamera.modulemap */,
-				57C06C595490B43BFE284EAD2BAF5C00 /* InstatCamera.xcconfig */,
-				B67570B3336E78079ECA708C68D4207A /* InstatCamera-dummy.m */,
-				D53317D9617F641524085D1DE0E0201C /* InstatCamera-Info.plist */,
-				6B5EEC58FA00B82BB4D1CD390CCE380C /* InstatCamera-prefix.pch */,
-				345CEC28A114D3CB179DB2711F55243F /* InstatCamera-umbrella.h */,
+				1EE63B088D6ECFD995CE7610C3007E72 /* Writer.h */,
+				FCF7D341706D6B000EC04EF64D915249 /* WriterImpl.h */,
+				4DF9916AAAD08EA75AED9A984FC90072 /* WriterImpl.m */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/InstatCamera";
+			name = Writer;
+			path = InstatCamera/Classes/Writer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		80671E053EABB43367D65D7E38255B95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22AA4007B5318C69A45A274637DBA526 /* Camera.h in Headers */,
+				F5C70105A5C3362964E71D9C834DF679 /* CameraImpl.h in Headers */,
+				CA00E383D9249B2FB688D43E32F76C9D /* CameraPreview.h in Headers */,
+				02BAA1143418F6A82F2D32B727D1ADAB /* InstatCamera-umbrella.h in Headers */,
+				69B77F12AAF1231CC38560A953BA7F15 /* InstatCamera.h in Headers */,
+				2D7A474D170E89505C06AC03875C1E36 /* InstatCameraDelegate.h in Headers */,
+				55FDAF4B2A438DD8F58C11AEA0097DF3 /* InstatDefaultVideoSettings.h in Headers */,
+				A5A3E4736D17EEBF6C8EC2909A027A59 /* InstatSessionPreset.h in Headers */,
+				93AFACC0A1E4AE608B03DF1679C84AC9 /* InstatSessionPresetAdapter.h in Headers */,
+				FBBE7E670C3192CF6E98BD5F7EA9EE6D /* MKTimer.h in Headers */,
+				E1706281D739B1925653F7EE7A55F9C3 /* MKTimerImpl.h in Headers */,
+				E308B9C7DA84FE9434326F63B202389D /* OutputSampleBufferDelegate.h in Headers */,
+				025A4568EFF948B03F23EFBCA6F82173 /* RecordingTimer.h in Headers */,
+				2E1C52B514CCB4AB9BDFA5C77F436E2D /* RecordingTimerImpl.h in Headers */,
+				091DE65759951C8B8CD4679CA568EEB6 /* Writer.h in Headers */,
+				8C8D369B5399CE4E0A2F4177F1EEB067 /* WriterImpl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AC1F5053A55760877B44F0BA283E0C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FF2674AB6F4CF9D6B2561042ED6BDC32 /* Pods-InstatCamera_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7E45AE0044B0BF0A0D1B875999D8DB5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				009BA307A9289F605A1DBD7120B22D03 /* Camera.h in Headers */,
-				61533F1436842124B20946056C817139 /* CameraPreview.h in Headers */,
-				4CE31441729FC3644066BA02C1E347A8 /* InstatCamera-umbrella.h in Headers */,
-				E939CF78209C4A2E7ADA4B2647E3FDDA /* InstatCamera.h in Headers */,
-				CC4E79CD22BB771B00BA7B7D /* MKTimer.h in Headers */,
-				CC4E79CF22BB771B00BA7B7D /* MKTimerImpl.h in Headers */,
-				2EFCD2BEA37EA48AAFD251EFF96675D7 /* InstatCameraDelegate.h in Headers */,
-				ED07D3794A21A9903E24FABE07A6F430 /* InstatDefaultVideoSettings.h in Headers */,
-				CC4E79D322BB774300BA7B7D /* RecordingTimerImpl.h in Headers */,
-				CB4273D93F9EE67F84844927277B904D /* InstatSessionPreset.h in Headers */,
-				8A20E3123891A5233C2F9AA1B072E7CA /* InstatSessionPresetAdapter.h in Headers */,
-				442E25A21A4C93EEBFA0CC3D4BCEF4D1 /* OutputSampleBufferDelegate.h in Headers */,
-				F8E06ABDCCD6C6D1CC036AB41819F071 /* Writer.h in Headers */,
-				2181092D2225F90771F43B03D8158F9D /* WriterImpl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,14 +459,14 @@
 			productReference = 7486D9EB899892F27113EF6420AFDA48 /* Pods_InstatCamera_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7A2486C8178FC5A2820F78D39726FC3A /* InstatCamera */ = {
+		6BFEB0E1F74C45C7D74549CD71D6DCE0 /* InstatCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A265A30C1428457A0A8E5BD0132B570 /* Build configuration list for PBXNativeTarget "InstatCamera" */;
+			buildConfigurationList = 252EA7BD20A76D7BD1A877C1C30F12E7 /* Build configuration list for PBXNativeTarget "InstatCamera" */;
 			buildPhases = (
-				D7E45AE0044B0BF0A0D1B875999D8DB5 /* Headers */,
-				0A97A2A7CFBBCBBB09A86796009CC26B /* Sources */,
-				D437BA1BD790ABFBDAE69865BD4EA1B8 /* Frameworks */,
-				7B6CE4162B941202424A3EA91E7054C1 /* Resources */,
+				80671E053EABB43367D65D7E38255B95 /* Headers */,
+				BB4E5EA9736B31A8AC12AB6979637C70 /* Sources */,
+				BAEFABFC9E7414EC47940C8C639FB67A /* Frameworks */,
+				B59E115F15F060AA3E83673EA324FD4F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -493,7 +499,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A2486C8178FC5A2820F78D39726FC3A /* InstatCamera */,
+				6BFEB0E1F74C45C7D74549CD71D6DCE0 /* InstatCamera */,
 				08A94055FDD6B8315D671F2E528141B0 /* Pods-InstatCamera_Example */,
 				21AB4CCA065CE89561102E9FFCE5784A /* Pods-InstatCamera_Tests */,
 			);
@@ -508,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B6CE4162B941202424A3EA91E7054C1 /* Resources */ = {
+		B59E115F15F060AA3E83673EA324FD4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -525,22 +531,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A97A2A7CFBBCBBB09A86796009CC26B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC4E79D422BB774300BA7B7D /* RecordingTimerImpl.m in Sources */,
-				063A2F3980397257444FB61CE5162F6A /* Camera.m in Sources */,
-				70B0EAD5A20EFB9BDB20068D3B210F6C /* CameraPreview.m in Sources */,
-				2A77055E04790D8545E7DFD861039296 /* InstatCamera-dummy.m in Sources */,
-				CC4E79CE22BB771B00BA7B7D /* MKTimerImpl.m in Sources */,
-				892F17C6DCA1F23E5043EAB7A7BB90E4 /* InstatCamera.m in Sources */,
-				0E05624970172E9ED58C90A2AE4EB0F1 /* InstatDefaultVideoSettings.m in Sources */,
-				3F2A7920EC2EFE13D58BE98F3F05DC37 /* InstatSessionPresetAdapter.m in Sources */,
-				7134068BB439DB66E8CE3E1382287E2E /* WriterImpl.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2EC526DB5706F98AE77D7EB03B8D2D19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +547,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB4E5EA9736B31A8AC12AB6979637C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFF326C77856BC5FCFEC66F049943D7 /* CameraImpl.m in Sources */,
+				DF41F84022812CAD0C89A6447B34E68B /* CameraPreview.m in Sources */,
+				A0162C51A20146F3654AE1B3D64280CA /* InstatCamera-dummy.m in Sources */,
+				EC137FED65246FBBF3ADBFEFC8248755 /* InstatCamera.m in Sources */,
+				75CF52BDC4FA793B9270139F689DF2A5 /* InstatDefaultVideoSettings.m in Sources */,
+				DA5593C31D322103E7C7F2CAC873AB5C /* InstatSessionPresetAdapter.m in Sources */,
+				276ACFCCE662E79E977D7DE375BE2512 /* MKTimerImpl.m in Sources */,
+				04C0D33ACB448BC0A989F7353D3642B8 /* RecordingTimerImpl.m in Sources */,
+				67ED7D4F023AB5B91AECDD584A3EDEA9 /* WriterImpl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -569,7 +575,7 @@
 		AD70F4F6072E651BD1FEF400350BF033 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = InstatCamera;
-			target = 7A2486C8178FC5A2820F78D39726FC3A /* InstatCamera */;
+			target = 6BFEB0E1F74C45C7D74549CD71D6DCE0 /* InstatCamera */;
 			targetProxy = 6804A2D4EB1B8E0AF706A47EF05C99E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -769,9 +775,9 @@
 			};
 			name = Release;
 		};
-		794F04BB035A678D055A340BF2040857 /* Release */ = {
+		9B616126AB8E3C23CDEC6F799F4A5BB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57C06C595490B43BFE284EAD2BAF5C00 /* InstatCamera.xcconfig */;
+			baseConfigurationReference = 4702E4A05B9C14CEB6EF723FA1B9131E /* InstatCamera.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -795,11 +801,10 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B2268375131927F740C1F6FE26257696 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -870,9 +875,9 @@
 			};
 			name = Release;
 		};
-		D4C22B9BAF804A64853401972C781370 /* Debug */ = {
+		E06DD5E6FAEDD4FAAFAF7362E21C557B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57C06C595490B43BFE284EAD2BAF5C00 /* InstatCamera.xcconfig */;
+			baseConfigurationReference = 4702E4A05B9C14CEB6EF723FA1B9131E /* InstatCamera.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -896,14 +901,24 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		252EA7BD20A76D7BD1A877C1C30F12E7 /* Build configuration list for PBXNativeTarget "InstatCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B616126AB8E3C23CDEC6F799F4A5BB3 /* Debug */,
+				E06DD5E6FAEDD4FAAFAF7362E21C557B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -918,15 +933,6 @@
 			buildConfigurations = (
 				B2268375131927F740C1F6FE26257696 /* Debug */,
 				D0FF88DA5A82429DC885E0D2CD84727E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9A265A30C1428457A0A8E5BD0132B570 /* Build configuration list for PBXNativeTarget "InstatCamera" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4C22B9BAF804A64853401972C781370 /* Debug */,
-				794F04BB035A678D055A340BF2040857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

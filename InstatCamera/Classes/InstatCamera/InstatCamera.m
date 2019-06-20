@@ -7,13 +7,13 @@
 
 #import "InstatCamera.h"
 #import "WriterImpl.h"
-#import "Camera.h"
+#import "CameraImpl.h"
 #import "InstatSessionPresetAdapter.h"
 #import "InstatDefaultVideoSettings.h"
 #import "RecordingTimerImpl.h"
 
 @interface InstatCamera ()
-@property (nonatomic, strong) Camera *camera;
+@property (nonatomic, strong) id<Camera> camera;
 @property (nonatomic, strong) id<Writer> writer;
 @property (nonatomic, strong) id<RecordingTimer> timer;
 @property (nonatomic, assign) InstatSessionPreset instatSessionPreset;
@@ -76,7 +76,7 @@
 // MARK: - Private : Camera
 - (void)setupCameraWith:(AVCaptureSessionPreset) sessionPreset {
     
-    Camera *camera = [[Camera alloc] initWithCaptureSessionPreset:sessionPreset];
+    CameraImpl *camera = [[CameraImpl alloc] initWithCaptureSessionPreset:sessionPreset];
     self.camera = camera;
 }
 

@@ -11,6 +11,7 @@
 #endif
 
 #import "Camera.h"
+#import "CameraImpl.h"
 #import "CameraPreview.h"
 #import "InstatCamera.h"
 #import "InstatSessionPreset.h"
@@ -18,6 +19,10 @@
 #import "InstatDefaultVideoSettings.h"
 #import "InstatSessionPresetAdapter.h"
 #import "OutputSampleBufferDelegate.h"
+#import "RecordingTimer.h"
+#import "RecordingTimerImpl.h"
+#import "MKTimer.h"
+#import "MKTimerImpl.h"
 #import "Writer.h"
 #import "WriterImpl.h"
 
