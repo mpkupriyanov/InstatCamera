@@ -12,7 +12,7 @@
 @interface CameraImpl () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
-@property (nonatomic, assign, readwrite) BOOL isRecording;
+@property (nonatomic, assign, readwrite, getter=isRecording) BOOL recording;
 @property (nonatomic) dispatch_queue_t sessionQueue;
 @property (nonatomic, readwrite) CameraStatus status;
 
@@ -28,7 +28,7 @@
     self = [super init];
     if (self) {
         self.sessionPreset = sessionPreset;
-        self.isRecording = false;
+        self.recording = false;
         [self setupSession];
     }
     return self;
@@ -41,11 +41,11 @@
 // MARK: - Public
 
 - (void)startRecording {
-    _isRecording = YES;
+    _recording = YES;
 }
 
 - (void)stopRecording {
-    _isRecording = NO;
+    _recording = NO;
 }
 
 // MARK: - Private : Capture session setup

@@ -8,7 +8,7 @@
 #import "MKTimerImpl.h"
 #import <dispatch/dispatch.h>
 
-dispatch_source_t createDispatchTimer(double interval, dispatch_queue_t queue, dispatch_block_t block) {
+static dispatch_source_t createDispatchTimer(double interval, dispatch_queue_t queue, dispatch_block_t block) {
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     if (timer) {
         dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC), interval * NSEC_PER_SEC, (1ull * NSEC_PER_SEC) / 10);
