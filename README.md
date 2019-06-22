@@ -10,9 +10,12 @@ Video recording with seamless chunks by 5 seconds
 
 Output:
 
-out00000.mov
-out00001.mov
+out00000.mov,
+
+out00001.mov,
+
 ...
+
 out0000<N>.mov
 
 ## Example
