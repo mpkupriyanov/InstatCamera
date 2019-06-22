@@ -18,7 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  InstatCamera - video recording with seamless chunks by 5 seconds
+  
+  Objective-C
+  
+  InstatCamera - video recording with seamless chunks by 5 seconds and next uploading to server for merging.
+  
+  Used:
+  - AVCaptureVideoDataOutput & AVCaptureAudioDataOutput;
+  - delegate: - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+  - AVAssetWriter;
+  - Default presets: 720p, 1080p;
+  - Default chunk duration 5 seconds. Also you can set yours duration;
+  
                        DESC
 
   s.homepage         = 'https://github.com/mpkupriyanov/InstatCamera'
