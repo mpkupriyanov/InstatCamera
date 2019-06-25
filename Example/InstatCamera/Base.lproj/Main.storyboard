@@ -42,7 +42,6 @@
                                 <constraints>
                                     <constraint firstItem="ohD-vB-NzD" firstAttribute="leading" secondItem="vxX-F0-TM0" secondAttribute="leading" id="8zy-Yq-JXv"/>
                                     <constraint firstAttribute="width" constant="76" id="Bga-uQ-Qd7"/>
-                                    <constraint firstAttribute="trailing" secondItem="myX-Ui-aWz" secondAttribute="trailing" constant="6" id="XGc-2D-P65"/>
                                     <constraint firstItem="ohD-vB-NzD" firstAttribute="top" secondItem="vxX-F0-TM0" secondAttribute="top" id="Y5Q-tr-Nza"/>
                                     <constraint firstAttribute="trailing" secondItem="ohD-vB-NzD" secondAttribute="trailing" id="cen-eg-TT9"/>
                                     <constraint firstItem="myX-Ui-aWz" firstAttribute="centerY" secondItem="vxX-F0-TM0" secondAttribute="centerY" id="e4d-dw-kbj"/>

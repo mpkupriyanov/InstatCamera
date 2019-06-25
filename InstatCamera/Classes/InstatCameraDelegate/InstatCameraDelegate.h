@@ -13,6 +13,8 @@
 
 @optional
 - (void)completedChunkFileURL:(NSURL *) file_url;
-- (void)recordingTime:(NSString *)time;
+- (void)recordingTime:(NSString *) time;
+- (void)sessionWasInterrupted;
+- (void)sessionInterruptionEnded;
 @end
 #endif /* InstatCameraDelegate_h */

@@ -37,14 +37,6 @@
     [self setupButtons];
 }
 
-//- (BOOL) shouldAutorotateNow {
-//    return true;
-//}
-//
-//- (UIInterfaceOrientationMask)supportedInterfaceOrientationsForThisContorller {
-//    return UIInterfaceOrientationMaskLandscape;
-//}
-
 - (void) viewWillTransitionToSize:(CGSize)size
         withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
@@ -62,28 +54,40 @@
 
 - (IBAction)toggleRecording:(id)sender {
     
-    UIButton *button = (UIButton *)sender;
-    NSString *title;
     if (_instatCamera.isRecording) {
         [_instatCamera stopRecording];
-        title = @"Start";
     } else {
         [_instatCamera startRecording];
-        title = @"Stop";
-        _removeButton.enabled = _shareButton.enabled = false;
     }
-    [button setTitle:title forState:UIControlStateNormal];
+    [self updateUI];
 }
 
 - (IBAction)shareButtonPressed:(id)sender {
-    [self share:_chunkURLArray];
+    [self share];
 }
 
 - (IBAction)removeButtonPressed:(id)sender {
     
     [self removeAllFiles];
     [_instatCamera clear];
-    _removeButton.enabled = _shareButton.enabled = false;
+    [self updateButtons];
+}
+
+// MARK: - Private : UI
+- (void)updateUI {
+
+    NSString *title;
+    if (_instatCamera.isRecording) {
+        title = @"Stop";
+    } else {
+        title = @"Start";
+    }
+    [self updateButtons];
+    [_toggleButton setTitle:title forState:UIControlStateNormal];
+}
+
+- (void)updateButtons {
+    _removeButton.enabled = _shareButton.enabled = _chunkURLArray.count > 0;
 }
 
 // MARK: - Private : Button
@@ -99,17 +103,22 @@
 
 // MARK: - Private : Share
 
-- (void)share:(NSArray<NSURL *> *) chunkUrls {
+- (void)share {
     
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:chunkUrls applicationActivities:nil];
-    NSArray *excludeActivities = @[
-                                   UIActivityTypePrint,
-                                   UIActivityTypeAssignToContact,
-                                   UIActivityTypeAddToReadingList,
-                                   UIActivityTypePostToFlickr,
-                                   UIActivityTypePostToVimeo];
-    activityVC.excludedActivityTypes = excludeActivities;
-    [self presentViewController:activityVC animated:YES completion:nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:self.chunkURLArray applicationActivities:nil];
+        NSArray *excludeActivities = @[
+                                       UIActivityTypePrint,
+                                       UIActivityTypeAssignToContact,
+                                       UIActivityTypeAddToReadingList,
+                                       UIActivityTypePostToFlickr,
+                                       UIActivityTypePostToVimeo];
+        activityVC.excludedActivityTypes = excludeActivities;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:activityVC animated:YES completion:nil];
+        });
+    });
+    
 }
 
 // MARK: - Private
@@ -130,21 +139,29 @@
 }
 
 // MARK: - InstatCameraDelegate
-
 - (void)completedChunkFileURL:(NSURL *) file_url {
     
     [_chunkURLArray addObject:file_url];
     // Share all files when stoped recording
     if (_instatCamera.isRecording == false) {
+        [self updateButtons];
         if (_shareSwitch.isOn == true) {
-            [self share:_chunkURLArray];
+            
+            [self share];
         }
-        _removeButton.enabled = _shareButton.enabled = _chunkURLArray.count > 0;
     }
     NSLog(@"%@", file_url.absoluteString);
 }
 
 - (void)recordingTime:(NSString *)time {
     _timerLabel.text = time;
+}
+
+- (void)sessionWasInterrupted {
+    [self updateUI];
+}
+
+- (void)sessionInterruptionEnded {
+    
 }
 @end

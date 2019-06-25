@@ -41,11 +41,11 @@
 // MARK: - Public
 
 - (void)startRecording {
-    _recording = YES;
+    self.recording = YES;
 }
 
 - (void)stopRecording {
-    _recording = NO;
+    self.recording = NO;
 }
 
 // MARK: - Private : Capture session setup
@@ -115,8 +115,8 @@
     NSError *error = nil;
     [_session beginConfiguration];
     // Add video input.
-    AVCaptureDevice* videoDevice = [self availableVideoDevice];
-    AVCaptureDeviceInput* videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
+    AVCaptureDevice *videoDevice = [self availableVideoDevice];
+    AVCaptureDeviceInput *videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice: videoDevice error: &error];
     if (!videoDeviceInput) {
         NSLog(@"Could not create video device input: %@", error);
         _status = SessionConfigurationFailed;
@@ -134,8 +134,8 @@
     }
     
     // Add audio input.
-    AVCaptureDevice* audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
-    AVCaptureDeviceInput* audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&error];
+    AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeAudio];
+    AVCaptureDeviceInput *audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice: audioDevice error: &error];
     if (!audioDeviceInput) {
         NSLog(@"Could not create audio device input: %@", error);
     }

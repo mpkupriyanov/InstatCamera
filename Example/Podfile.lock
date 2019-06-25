@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InstatCamera: 315c95915cd0fbfcc33a0b833feb00e4955017a8
+  InstatCamera: fd9073c6fcd4f38e36900ea0e71afebe84ba53fb
 
 PODFILE CHECKSUM: b55ce0a891b78b2fea5f45805c1dae18fd8420a7
 
