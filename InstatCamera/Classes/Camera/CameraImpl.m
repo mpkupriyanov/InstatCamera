@@ -64,19 +64,13 @@
 }
 
 - (void)startSession {
-    
-    dispatch_async(_sessionQueue, ^{
-        [self.session startRunning];
-    });
+    [self.session startRunning];
 }
 
 - (void)stopSession {
     
-    if (_status == Success
-        && self.session.isRunning == true) {
-        dispatch_async(_sessionQueue, ^{
-            [self.session stopRunning];
-        });
+    if (self.session.isRunning == true) {
+        [self.session stopRunning];
     }
 }
 

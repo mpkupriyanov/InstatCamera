@@ -1,5 +1,5 @@
 PODS:
-  - InstatCamera (0.1.0)
+  - InstatCamera (0.2.2)
 
 DEPENDENCIES:
   - InstatCamera (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InstatCamera: fd9073c6fcd4f38e36900ea0e71afebe84ba53fb
+  InstatCamera: 671bb695bdc4c84c14ed49bf63bc9cde451e16c8
 
 PODFILE CHECKSUM: b55ce0a891b78b2fea5f45805c1dae18fd8420a7
 
