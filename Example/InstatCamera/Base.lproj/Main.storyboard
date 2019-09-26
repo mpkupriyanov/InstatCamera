@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +24,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxX-F0-TM0">
-                                <rect key="frame" x="289" y="30" width="76" height="24"/>
+                                <rect key="frame" x="289" y="10" width="76" height="24"/>
                                 <subviews>
                                     <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohD-vB-NzD">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="24"/>
@@ -40,6 +38,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="myX-Ui-aWz" secondAttribute="trailing" priority="250" constant="6" id="3uV-Es-udm"/>
                                     <constraint firstItem="ohD-vB-NzD" firstAttribute="leading" secondItem="vxX-F0-TM0" secondAttribute="leading" id="8zy-Yq-JXv"/>
                                     <constraint firstAttribute="width" constant="76" id="Bga-uQ-Qd7"/>
                                     <constraint firstItem="ohD-vB-NzD" firstAttribute="top" secondItem="vxX-F0-TM0" secondAttribute="top" id="Y5Q-tr-Nza"/>
@@ -104,6 +103,32 @@
                                     </switch>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-5G-l9O">
+                                <rect key="frame" x="313" y="280" width="46" height="107"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-kY-dB3">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="a6f-d0-3yO"/>
+                                            <constraint firstAttribute="height" constant="46" id="yK7-sK-cko"/>
+                                        </constraints>
+                                        <state key="normal" image="zoom_in"/>
+                                        <connections>
+                                            <action selector="zoomInPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="ahO-Zw-jfY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3w-tb-rcg">
+                                        <rect key="frame" x="0.0" y="61" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="9ur-I5-fLE"/>
+                                        </constraints>
+                                        <state key="normal" title="zoom out" image="zoom_out"/>
+                                        <connections>
+                                            <action selector="zoomOutPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="Sfg-HZ-olr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -112,9 +137,11 @@
                             <constraint firstItem="ggh-Ix-vi8" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Whz-tb-O3Z"/>
                             <constraint firstItem="wbO-mm-i0d" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="bQk-6Z-7TK"/>
                             <constraint firstItem="wbO-mm-i0d" firstAttribute="top" secondItem="ggh-Ix-vi8" secondAttribute="bottom" constant="30" id="d5o-ED-0MO"/>
+                            <constraint firstAttribute="trailing" secondItem="Qch-5G-l9O" secondAttribute="trailing" constant="16" id="eKt-Hd-Kqj"/>
                             <constraint firstItem="vxX-F0-TM0" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="10" id="ewO-we-T0f"/>
                             <constraint firstItem="Vk6-D0-dzd" firstAttribute="top" secondItem="TpU-gO-2f1" secondAttribute="top" id="ewu-vb-O8N"/>
                             <constraint firstItem="ggh-Ix-vi8" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="ogg-BD-eAo"/>
+                            <constraint firstItem="Qch-5G-l9O" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="s34-S1-8j2"/>
                             <constraint firstAttribute="bottom" secondItem="Vk6-D0-dzd" secondAttribute="bottom" id="xeu-KN-WWv"/>
                             <constraint firstAttribute="trailing" secondItem="Vk6-D0-dzd" secondAttribute="trailing" id="zaq-Je-sC7"/>
                         </constraints>
@@ -136,4 +163,8 @@
             <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="zoom_in" width="92" height="92"/>
+        <image name="zoom_out" width="92" height="92"/>
+    </resources>
 </document>

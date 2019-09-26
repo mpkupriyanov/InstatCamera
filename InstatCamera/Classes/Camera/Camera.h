@@ -26,5 +26,7 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
 - (void)startRecording;
 - (void)stopRecording;
+- (void)zoomIn;
+- (void)zoomOut;
 @end
 #endif /* Camera_h */
