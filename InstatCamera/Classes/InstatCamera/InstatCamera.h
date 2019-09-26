@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)startRecording;
 - (void)stopRecording;
 - (void)clear;
+- (void)zoomIn;
+- (void)zoomOut;
 @end
 
 NS_ASSUME_NONNULL_END

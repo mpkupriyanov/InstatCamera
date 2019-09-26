@@ -73,6 +73,15 @@
     [self updateButtons];
 }
 
+// MARK: - Zoom
+- (IBAction)zoomInPressed:(id)sender {
+    [_instatCamera zoomIn];
+}
+
+- (IBAction)zoomOutPressed:(id)sender {
+    [_instatCamera zoomOut];
+}
+
 // MARK: - Private : UI
 - (void)updateUI {
 

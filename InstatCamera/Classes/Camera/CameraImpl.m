@@ -11,6 +11,7 @@
 
 @interface CameraImpl () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 @property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) AVCaptureDevice *videoDevice;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
 @property (nonatomic, assign, readwrite, getter=isRecording) BOOL recording;
 @property (nonatomic) dispatch_queue_t sessionQueue;
@@ -46,6 +47,39 @@
 
 - (void)stopRecording {
     self.recording = NO;
+}
+
+- (void)zoomIn {
+    
+    float zoomLevel = _videoDevice.videoZoomFactor + 2.0f;
+    float maxZoomFactor = 5; // Максимальный зум, который нам нужен
+    if (zoomLevel > maxZoomFactor) { zoomLevel = maxZoomFactor; }
+    [self zoom:zoomLevel];
+}
+
+- (void)zoomOut {
+    
+    float zoomLevel = _videoDevice.videoZoomFactor - 2.0f;
+    float minZoomFactor = _videoDevice.minAvailableVideoZoomFactor;
+    if (zoomLevel < minZoomFactor) { zoomLevel = minZoomFactor; }
+    [self zoom:zoomLevel];
+}
+
+// MARK: - Private : Zoom
+- (void)zoom:(CGFloat)zoomLevel {
+    
+    CGFloat maxZoomFactor = _videoDevice.activeFormat.videoMaxZoomFactor;
+    float zoomRate = 2.0f;
+    if ([_videoDevice respondsToSelector:@selector(rampToVideoZoomFactor:withRate:)]
+        && maxZoomFactor >= zoomLevel) {
+        NSError *error = nil;
+        if ([_videoDevice lockForConfiguration:&error]) {
+            [_videoDevice rampToVideoZoomFactor:zoomLevel withRate:zoomRate];
+            [_videoDevice unlockForConfiguration];
+        } else {
+            NSLog(@"error: %@", error);
+        }
+    }
 }
 
 // MARK: - Private : Capture session setup
@@ -126,6 +160,7 @@
         [self.session commitConfiguration];
         return;
     }
+    self.videoDevice = videoDevice;
     
     // Add audio input.
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeAudio];

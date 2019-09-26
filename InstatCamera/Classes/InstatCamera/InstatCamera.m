@@ -81,6 +81,15 @@
     return _camera.isRecording;
 }
 
+// MARK: Public : Zoom
+- (void)zoomIn {
+    [_camera zoomIn];
+}
+
+- (void)zoomOut {
+    [_camera zoomOut];
+}
+
 // MARK: - Private : Camera
 - (void)setupCameraWith:(AVCaptureSessionPreset) sessionPreset {
     
