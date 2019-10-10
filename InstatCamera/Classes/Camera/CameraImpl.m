@@ -60,7 +60,13 @@
 - (void)zoomOut {
     
     float zoomLevel = _videoDevice.videoZoomFactor - 2.0f;
-    float minZoomFactor = _videoDevice.minAvailableVideoZoomFactor;
+    float minZoomFactor = 1.0;
+    if (@available(iOS 11.0, *)) {
+        minZoomFactor = _videoDevice.minAvailableVideoZoomFactor;
+    } else {
+        // Fallback on earlier versions
+        minZoomFactor = 1.0;
+    }
     if (zoomLevel < minZoomFactor) { zoomLevel = minZoomFactor; }
     [self zoom:zoomLevel];
 }
