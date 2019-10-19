@@ -22,11 +22,11 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 @property (nonatomic, readonly) CameraStatus status;
 @property (nonatomic, assign, readonly, getter=isRecording) BOOL recording;
 @property (nonatomic, weak) id <OutputSampleBufferDelegate> delegate;
+@property (nonatomic, assign, readonly) CGFloat maxZoomFactor;
 
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
 - (void)startRecording;
 - (void)stopRecording;
-- (void)zoomIn;
-- (void)zoomOut;
+- (void)zoom:(CGFloat)zoomLevel;
 @end
 #endif /* Camera_h */

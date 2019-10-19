@@ -22,6 +22,10 @@
 
 @property (nonatomic, strong) InstatCamera *instatCamera;
 @property (nonatomic, strong) NSMutableArray<NSURL *> *chunkURLArray;
+
+@property (nonatomic, assign) CGFloat minimumZoom;
+@property (nonatomic, assign) CGFloat maximumZoom;
+@property (nonatomic, assign) CGFloat lastZoomFactor;
 @end
 
 @implementation MKViewController
@@ -35,6 +39,7 @@
     self.cameraPreview.captureSession = camera.captureSession;
     self.chunkURLArray = [NSMutableArray array];
     [self setupButtons];
+    [self zoomSetup];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size
@@ -74,12 +79,8 @@
 }
 
 // MARK: - Zoom
-- (IBAction)zoomInPressed:(id)sender {
-    [_instatCamera zoomIn];
-}
-
-- (IBAction)zoomOutPressed:(id)sender {
-    [_instatCamera zoomOut];
+- (IBAction)zoomPinchGesture:(UIPinchGestureRecognizer *)recognizer {
+    [self pinchState:recognizer.state scale:recognizer.scale];
 }
 
 // MARK: - Private : UI
@@ -127,11 +128,9 @@
             [self presentViewController:activityVC animated:YES completion:nil];
         });
     });
-    
 }
 
 // MARK: - Private
-
 - (void)removeAllFiles {
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -172,5 +171,41 @@
 
 - (void)sessionInterruptionEnded {
     
+}
+
+// MARK: - Private : zoom
+- (void)zoomSetup {
+    
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPinchGesture:)];
+    [_cameraPreview addGestureRecognizer:pinch];
+    
+    _minimumZoom = 1.0;
+    _maximumZoom = 7.0;
+    _lastZoomFactor = 1.0;
+}
+
+- (void)pinchState:(UIGestureRecognizerState)state scale:(CGFloat) scale {
+    
+    CGFloat newScaleFactor = [self minMaxZoom: scale * _lastZoomFactor];
+    switch (state) {
+        case UIGestureRecognizerStateBegan:
+            break;
+            
+        case UIGestureRecognizerStateChanged:
+            [_instatCamera zoom:newScaleFactor];
+            break;
+            
+        case UIGestureRecognizerStateEnded:
+            _lastZoomFactor = [self minMaxZoom:newScaleFactor];
+            [_instatCamera zoom: _lastZoomFactor];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (CGFloat)minMaxZoom:(CGFloat)factor {
+    return MIN(MIN(MAX(factor, _minimumZoom), _maximumZoom), _instatCamera.maxZoomFactor);
 }
 @end

@@ -21,7 +21,9 @@
 @property (nonatomic, strong) AVCaptureVideoDataOutput *videoOutput;
 @property (nonatomic, strong) AVCaptureAudioDataOutput *audioOutput;
 
+@property (nonatomic, assign, readwrite) CGFloat maxZoomFactor;
 @end
+
 @implementation CameraImpl
 
 // MARK: - Life cycle
@@ -49,29 +51,11 @@
     self.recording = NO;
 }
 
-- (void)zoomIn {
-    
-    float zoomLevel = _videoDevice.videoZoomFactor + 2.0f;
-    float maxZoomFactor = 5; // Максимальный зум, который нам нужен
-    if (zoomLevel > maxZoomFactor) { zoomLevel = maxZoomFactor; }
-    [self zoom:zoomLevel];
-}
-
-- (void)zoomOut {
-    
-    float zoomLevel = _videoDevice.videoZoomFactor - 2.0f;
-    float minZoomFactor = _videoDevice.minAvailableVideoZoomFactor;
-    if (zoomLevel < minZoomFactor) { zoomLevel = minZoomFactor; }
-    [self zoom:zoomLevel];
-}
-
-// MARK: - Private : Zoom
 - (void)zoom:(CGFloat)zoomLevel {
     
-    CGFloat maxZoomFactor = _videoDevice.activeFormat.videoMaxZoomFactor;
     float zoomRate = 2.0f;
     if ([_videoDevice respondsToSelector:@selector(rampToVideoZoomFactor:withRate:)]
-        && maxZoomFactor >= zoomLevel) {
+        && _maxZoomFactor >= zoomLevel) {
         NSError *error = nil;
         if ([_videoDevice lockForConfiguration:&error]) {
             [_videoDevice rampToVideoZoomFactor:zoomLevel withRate:zoomRate];
@@ -161,6 +145,7 @@
         return;
     }
     self.videoDevice = videoDevice;
+    self.maxZoomFactor = videoDevice.activeFormat.videoMaxZoomFactor;
     
     // Add audio input.
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeAudio];
