@@ -22,8 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
 - (void)startRecording;
 - (void)stopRecording;
-- (void)zoomIn;
-- (void)zoomOut;
+- (void)zoom:(CGFloat)zoomLevel;
 @end
 
 NS_ASSUME_NONNULL_END
