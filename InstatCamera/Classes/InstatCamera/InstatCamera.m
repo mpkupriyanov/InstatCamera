@@ -82,12 +82,12 @@
 }
 
 // MARK: Public : Zoom
-- (void)zoomIn {
-    [_camera zoomIn];
+- (void)zoom:(CGFloat)zoomLevel {
+    [_camera zoom:zoomLevel];
 }
 
-- (void)zoomOut {
-    [_camera zoomOut];
+- (CGFloat)maxZoomFactor {
+    return _camera.maxZoomFactor;
 }
 
 // MARK: - Private : Camera

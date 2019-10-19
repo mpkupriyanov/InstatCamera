@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InstatCamera'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'InstatCamera - video recording with seamless chunks by 5 seconds'
 
 # This description is used to generate tags and improve search results.
