@@ -77,6 +77,10 @@
     [_timer clear];
 }
 
+- (void)saveToPath:(NSString *)path {
+    [_writer saveToPath:path];
+}
+
 - (BOOL)isRecording {
     return _camera.isRecording;
 }

@@ -16,5 +16,6 @@
 - (void)finish;
 /// Clear number of chunks
 - (void)clear;
+- (void)saveToPath:(NSString *) path;
 @end
 #endif /* Writer_h */

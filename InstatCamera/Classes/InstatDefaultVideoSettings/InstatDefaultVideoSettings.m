@@ -29,11 +29,7 @@
 + (NSDictionary *)videoSettingsPreset720 {
     
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
-    if (@available(iOS 11.0, *)) {
-        settings[AVVideoCodecKey] = AVVideoCodecTypeH264;
-    } else {
-        settings[AVVideoCodecKey] = AVVideoCodecH264;
-    }
+    settings[AVVideoCodecKey] = AVVideoCodecTypeH264;
     settings[AVVideoHeightKey] = @(720);
     settings[AVVideoWidthKey] = @(1280);
     settings[AVVideoCompressionPropertiesKey] = @{ AVVideoAverageBitRateKey: @(3000000),
@@ -45,11 +41,7 @@
 + (NSDictionary *)videoSettingsPreset1080 {
     
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
-    if (@available(iOS 11.0, *)) {
-        settings[AVVideoCodecKey] = AVVideoCodecTypeH264;
-    } else {
-        settings[AVVideoCodecKey] = AVVideoCodecH264;
-    }
+    settings[AVVideoCodecKey] = AVVideoCodecTypeH264;
     settings[AVVideoHeightKey] = @(1080);
     settings[AVVideoWidthKey] = @(1920);
     settings[AVVideoCompressionPropertiesKey] = @{ AVVideoAverageBitRateKey: @(7000000),

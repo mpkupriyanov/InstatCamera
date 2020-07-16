@@ -20,7 +20,9 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 @property (nonatomic, assign) NSInteger chunkNumber;
 @property (nonatomic, strong) NSURL *chunkOutputURL;
 @property (nonatomic, strong) NSDictionary *videoSettings;
+@property (nonatomic, strong) NSString *savePath;
 @end
+
 @implementation WriterImpl
 @synthesize delegate;
 
@@ -50,10 +52,14 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     _chunkNumber = 0;
 }
 
+- (void)saveToPath:(NSString *)path {
+    self.savePath = path;
+}
+
 // MARK: - Private
 - (void)createWriterInputWith:(CMTime) presentationTimeStamp {
     
-    NSString *outputPath = [[NSString alloc] initWithFormat:@"%@out%06ld.mov", NSTemporaryDirectory(), (long)_chunkNumber];
+    NSString *outputPath = [[NSString alloc] initWithFormat:@"file://%@out%06ld.mov", _savePath, (long)_chunkNumber];
     NSURL *chunkOutputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
     _chunkOutputURL = chunkOutputURL;
     NSFileManager *fileManager = [NSFileManager defaultManager];

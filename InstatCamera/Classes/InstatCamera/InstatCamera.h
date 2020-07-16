@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)startRecording;
 - (void)stopRecording;
 - (void)clear;
+- (void)saveToPath:(NSString *) path;
 // MARK: - Zoom
 @property (nonatomic, assign, readonly) CGFloat maxZoomFactor;
 - (void)zoom:(CGFloat)zoomLevel;

@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSTimeInterval chunkDuration;
 
 - (instancetype)initWithVideoSettings:(NSDictionary *) videoSettings;
-- (void)finish;
 @end
 
 NS_ASSUME_NONNULL_END
