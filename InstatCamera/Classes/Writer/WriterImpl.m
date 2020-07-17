@@ -57,16 +57,21 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 }
 
 // MARK: - Private
+
+- (NSString *)fileName {
+    return [[NSString alloc] initWithFormat:@"out%06ld.mov", (long)_chunkNumber];
+}
+
 - (void)createWriterInputWith:(CMTime) presentationTimeStamp {
     
-    NSString *outputPath = [[NSString alloc] initWithFormat:@"%@out%06ld.mov", _savePath, (long)_chunkNumber];
-    NSURL *chunkOutputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
+    NSURL *chunkOutputURL = [[NSURL alloc] initFileURLWithPath:_savePath];
+    chunkOutputURL = [chunkOutputURL URLByAppendingPathComponent:[self fileName]];
     _chunkOutputURL = chunkOutputURL;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    if ([fileManager fileExistsAtPath:outputPath]) {
+    NSString *path = chunkOutputURL.path;
+    if ([fileManager fileExistsAtPath:path]) {
         NSError *error;
-        if ([fileManager removeItemAtPath:outputPath error:&error] == NO) {
+        if ([fileManager removeItemAtPath:path error:&error] == NO) {
             // Обработка ошибки при удалении
             NSLog(@"Can't remove file");
         }

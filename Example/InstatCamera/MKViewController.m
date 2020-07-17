@@ -62,6 +62,7 @@
     if (_instatCamera.isRecording) {
         [_instatCamera stopRecording];
     } else {
+        [_instatCamera saveToPath:[self documentsDirectory]];
         [_instatCamera startRecording];
     }
     [self updateUI];
@@ -144,6 +145,10 @@
         }
     }
     [_chunkURLArray removeAllObjects];
+}
+
+- (NSString *)documentsDirectory {
+    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSAllDomainsMask, true)[0];
 }
 
 // MARK: - InstatCameraDelegate
