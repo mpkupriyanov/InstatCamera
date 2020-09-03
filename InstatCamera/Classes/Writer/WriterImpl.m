@@ -67,7 +67,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 }
 
 // MARK: - Private
-- (void)setOrientationTo:(AVAssetWriterInput)assetWriterInput {
+- (void)setOrientationTo:(AVAssetWriterInput *)assetWriterInput {
     if (_needChangeOrientation) {
         _needChangeOrientation = false;
         assetWriterInput.transform = CGAffineTransformMakeRotation(M_PI);
