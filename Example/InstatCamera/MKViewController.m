@@ -53,10 +53,10 @@
 
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     _cameraPreview.videoOrientation = (AVCaptureVideoOrientation)deviceOrientation;
+    [_instatCamera setVideoOrientation:(AVCaptureVideoOrientation)deviceOrientation];
 }
 
 // MARK: - Action
-
 - (IBAction)toggleRecording:(id)sender {
     
     if (_instatCamera.isRecording) {
@@ -113,7 +113,6 @@
 }
 
 // MARK: - Private : Share
-
 - (void)share {
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{

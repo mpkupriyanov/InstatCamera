@@ -8,6 +8,7 @@
 #ifndef Writer_h
 #define Writer_h
 #import "OutputSampleBufferDelegate.h"
+@import AVFoundation.AVCaptureSession;
 @protocol InstatCameraDelegate;
 
 @protocol Writer <NSObject, OutputSampleBufferDelegate>
@@ -17,5 +18,6 @@
 /// Clear number of chunks
 - (void)clear;
 - (void)saveToPath:(NSString *) path;
+- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
 @end
 #endif /* Writer_h */

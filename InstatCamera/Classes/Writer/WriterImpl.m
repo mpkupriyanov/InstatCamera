@@ -21,6 +21,8 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 @property (nonatomic, strong) NSURL *chunkOutputURL;
 @property (nonatomic, strong) NSDictionary *videoSettings;
 @property (nonatomic, strong) NSString *savePath;
+@property (nonatomic, assign) AVCaptureVideoOrientation currentVideoOrientation;
+@property (nonatomic, assign) BOOL needChangeOrientation;
 @end
 
 @implementation WriterImpl
@@ -33,6 +35,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
         self.chunkDuration = kDefaultChunkDuration;
         self.chunkNumber = 0;
         self.videoSettings = videoSettings;
+        self.currentVideoOrientation = AVCaptureVideoOrientationLandscapeRight; // Default orientation, home button on the right
     }
     return self;
 }
@@ -56,7 +59,20 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     self.savePath = path;
 }
 
+- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
+    if (_currentVideoOrientation != videoOrientation) {
+        _currentVideoOrientation = videoOrientation;
+        _needChangeOrientation = true;
+    }
+}
+
 // MARK: - Private
+- (void)setOrientationTo:(AVAssetWriterInput)assetWriterInput {
+    if (_needChangeOrientation) {
+        _needChangeOrientation = false;
+        assetWriterInput.transform = CGAffineTransformMakeRotation(M_PI);
+    }
+}
 
 - (NSString *)fileName {
     return [[NSString alloc] initWithFormat:@"out%06ld.mov", (long)_chunkNumber];
@@ -88,6 +104,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     // Video input
     _videoAssetWriterInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings: _videoSettings];
     _videoAssetWriterInput.expectsMediaDataInRealTime = YES;
+    [self setOrientationTo:_videoAssetWriterInput];
     
     if ([_assetWriter canAddInput:_videoAssetWriterInput]) {
         [_assetWriter addInput:_videoAssetWriterInput];

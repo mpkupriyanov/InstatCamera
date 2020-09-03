@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 @import AVFoundation.AVCaptureSessionPreset;
+@import AVFoundation.AVCaptureSession;
 #import "InstatSessionPreset.h"
 #import "InstatCameraDelegate.h"
 
@@ -24,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopRecording;
 - (void)clear;
 - (void)saveToPath:(NSString *) path;
+- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
 // MARK: - Zoom
 @property (nonatomic, assign, readonly) CGFloat maxZoomFactor;
 - (void)zoom:(CGFloat)zoomLevel;

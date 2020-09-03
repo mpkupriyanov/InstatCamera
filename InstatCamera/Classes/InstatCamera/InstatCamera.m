@@ -81,6 +81,11 @@
     [_writer saveToPath:path];
 }
 
+// Orientation will be change on next video file
+- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
+    [_writer setVideoOrientation:videoOrientation];
+}
+
 - (BOOL)isRecording {
     return _camera.isRecording;
 }
@@ -137,7 +142,6 @@
 }
 
 // MARK: - Private : Interruption session
-
 - (void)sessionWasInterrupted:(NSNotification *) notification {
     
     AVCaptureSessionInterruptionReason reason = [notification.userInfo[AVCaptureSessionInterruptionReasonKey] integerValue];
