@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setZoom:(CGFloat)zoomLevel;
 - (void)setZoomRate:(CGFloat)zoomRate;
 - (void)zoomStop;
+- (CGFloat)currentZoomFactor;
 @end
 
 NS_ASSUME_NONNULL_END

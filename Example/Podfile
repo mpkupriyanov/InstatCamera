@@ -7,6 +7,5 @@ target 'InstatCamera_Example' do
   target 'InstatCamera_Tests' do
     inherit! :search_paths
 
-    
   end
 end
