@@ -15,8 +15,8 @@
 @property (nonatomic, weak) id <InstatCameraDelegate> delegate;
 /// Finish last chunk
 - (void)finish;
-/// Clear number of chunks
-- (void)clear;
+/// Reset number of chunks
+- (void)reset;
 - (void)saveToPath:(NSString *) path;
 - (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
 @end

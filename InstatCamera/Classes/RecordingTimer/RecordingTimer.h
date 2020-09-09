@@ -14,6 +14,6 @@
 
 - (void)start;
 - (void)cancel;
-- (void)clear;
+- (void)reset;
 @end
 #endif /* RecordingTimer_h */

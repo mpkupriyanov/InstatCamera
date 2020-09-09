@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithInstatCaptureSessionPreset:(InstatSessionPreset) instatSessionPreset;
 - (void)startRecording;
 - (void)stopRecording;
-- (void)clear;
+- (void)reset;
 - (void)saveToPath:(NSString *) path;
 - (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
 // MARK: - Zoom

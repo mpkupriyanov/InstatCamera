@@ -75,7 +75,7 @@
 - (IBAction)removeButtonPressed:(id)sender {
     
     [self removeAllFiles];
-    [_instatCamera clear];
+    [_instatCamera reset];
     [self updateButtons];
 }
 

@@ -30,7 +30,7 @@
     _timer = nil;
 }
 
-- (void)clear {
+- (void)reset {
     
     _time = 0;
     [self dispatchTime];

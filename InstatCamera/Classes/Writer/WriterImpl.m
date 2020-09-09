@@ -51,7 +51,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     _chunkStartTime = kCMTimeZero;
 }
 
-- (void)clear {
+- (void)reset {
     _chunkNumber = 0;
 }
 

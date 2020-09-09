@@ -72,9 +72,9 @@
     });
 }
 
-- (void)clear {
-    [_writer clear];
-    [_timer clear];
+- (void)reset {
+    [_writer reset];
+    [_timer reset];
 }
 
 - (void)saveToPath:(NSString *)path {
