@@ -184,8 +184,9 @@
     [_cameraPreview addGestureRecognizer:pinch];
     
     _minimumZoom = 1.0;
-    _maximumZoom = 7.0;
+    _maximumZoom = 10.0;
     _lastZoomFactor = 1.0;
+    [_instatCamera setZoomRate:0.5]; // Zoom speed rate
 }
 
 - (void)pinchState:(UIGestureRecognizerState)state scale:(CGFloat) scale {
@@ -196,12 +197,12 @@
             break;
             
         case UIGestureRecognizerStateChanged:
-            [_instatCamera zoom:newScaleFactor];
+            [_instatCamera setZoom:newScaleFactor];
             break;
             
         case UIGestureRecognizerStateEnded:
             _lastZoomFactor = [self minMaxZoom:newScaleFactor];
-            [_instatCamera zoom: _lastZoomFactor];
+            [_instatCamera setZoom: _lastZoomFactor];
             break;
             
         default:
