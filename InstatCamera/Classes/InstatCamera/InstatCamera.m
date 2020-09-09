@@ -81,9 +81,9 @@
     [_writer saveToPath:path];
 }
 
-// Orientation will be change on next video file
-- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
-    [_writer setVideoOrientation:videoOrientation];
+// Orientation will be change on next video file chunk
+- (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
+    [_writer setCaptureVideoOrientation:videoOrientation];
 }
 
 - (BOOL)isRecording {

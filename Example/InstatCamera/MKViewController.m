@@ -53,7 +53,7 @@
 
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     _cameraPreview.videoOrientation = (AVCaptureVideoOrientation)deviceOrientation;
-    [_instatCamera setVideoOrientation:(AVCaptureVideoOrientation)deviceOrientation];
+    [_instatCamera setCaptureVideoOrientation:(AVCaptureVideoOrientation)deviceOrientation];
 }
 
 // MARK: - Action

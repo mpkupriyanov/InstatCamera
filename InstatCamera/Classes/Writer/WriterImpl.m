@@ -59,7 +59,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     self.savePath = path;
 }
 
-- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
+- (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation {
     if (_currentVideoOrientation != videoOrientation) {
         _currentVideoOrientation = videoOrientation;
         _needChangeOrientation = true;

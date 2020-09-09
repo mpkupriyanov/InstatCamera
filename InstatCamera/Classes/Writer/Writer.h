@@ -18,6 +18,6 @@
 /// Clear number of chunks
 - (void)clear;
 - (void)saveToPath:(NSString *) path;
-- (void)setVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
+- (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
 @end
 #endif /* Writer_h */
