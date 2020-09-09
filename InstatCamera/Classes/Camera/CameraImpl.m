@@ -10,7 +10,7 @@
 @import AVFoundation;
 
 @interface CameraImpl () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
-@property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong, readwrite) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureDevice *videoDevice;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
 @property (nonatomic, assign, readwrite, getter=isRecording) BOOL recording;
@@ -22,6 +22,7 @@
 @property (nonatomic, strong) AVCaptureAudioDataOutput *audioOutput;
 
 @property (nonatomic, assign, readwrite) CGFloat maxZoomFactor;
+@property (nonatomic, assign) CGFloat zoomRate;
 @end
 
 @implementation CameraImpl
@@ -42,7 +43,6 @@
 }
 
 // MARK: - Public
-
 - (void)startRecording {
     self.recording = YES;
 }
@@ -51,23 +51,31 @@
     self.recording = NO;
 }
 
-- (void)zoom:(CGFloat)zoomLevel {
+- (void)setZoom:(CGFloat)zoomLevel {
     
-    float zoomRate = 2.0f;
     if ([_videoDevice respondsToSelector:@selector(rampToVideoZoomFactor:withRate:)]
         && _maxZoomFactor >= zoomLevel) {
         NSError *error = nil;
         if ([_videoDevice lockForConfiguration:&error]) {
-            [_videoDevice rampToVideoZoomFactor:zoomLevel withRate:zoomRate];
+            [_videoDevice rampToVideoZoomFactor:zoomLevel withRate:_zoomRate];
             [_videoDevice unlockForConfiguration];
         } else {
-            NSLog(@"error: %@", error);
+            NSLog(@"zoom error: %@", error);
         }
     }
 }
 
-// MARK: - Private : Capture session setup
+- (void)setZoomRate:(CGFloat)zoomRate {
+    _zoomRate = zoomRate;
+}
 
+- (void)zoomStop {
+    if (_videoDevice.isRampingVideoZoom) {
+        [_videoDevice cancelVideoZoomRamp];
+    }
+}
+
+// MARK: - Private : Capture session setup
 - (void)setupSession {
     
     _session = [[AVCaptureSession alloc] init];
@@ -145,7 +153,7 @@
         return;
     }
     self.videoDevice = videoDevice;
-    self.maxZoomFactor = videoDevice.activeFormat.videoMaxZoomFactor;
+    self.maxZoomFactor = videoDevice.maxAvailableVideoZoomFactor;
     
     // Add audio input.
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeAudio];
@@ -218,7 +226,6 @@
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate
-
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     
     CFRetain(sampleBuffer);

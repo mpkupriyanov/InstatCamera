@@ -91,8 +91,16 @@
 }
 
 // MARK: Public : Zoom
-- (void)zoom:(CGFloat)zoomLevel {
-    [_camera zoom:zoomLevel];
+- (void)setZoom:(CGFloat)zoomLevel {
+    [_camera setZoom:zoomLevel];
+}
+
+- (void)setZoomRate:(CGFloat)zoomRate {
+    [_camera setZoomRate:zoomRate];
+}
+
+- (void)zoomStop {
+    [_camera zoomStop];
 }
 
 - (CGFloat)maxZoomFactor {

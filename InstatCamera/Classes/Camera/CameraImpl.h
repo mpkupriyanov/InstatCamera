@@ -22,7 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCaptureSessionPreset:(AVCaptureSessionPreset) sessionPreset;
 - (void)startRecording;
 - (void)stopRecording;
-- (void)zoom:(CGFloat)zoomLevel;
+
+// MARK: - Zoom
+@property (nonatomic, assign, readonly) CGFloat maxZoomFactor;
+- (void)setZoom:(CGFloat)zoomLevel;
+- (void)setZoomRate:(CGFloat)zoomRate;
+- (void)zoomStop;
 @end
 
 NS_ASSUME_NONNULL_END
