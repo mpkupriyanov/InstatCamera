@@ -32,5 +32,6 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 - (void)setZoom:(CGFloat)zoomLevel;
 - (void)setZoomRate:(CGFloat)zoomRate;
 - (void)zoomStop;
+- (CGFloat)currentZoomFactor;
 @end
 #endif /* Camera_h */

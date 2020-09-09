@@ -80,6 +80,9 @@
         }
     }
 }
+- (CGFloat)currentZoomFactor {
+    return _videoDevice.videoZoomFactor;
+}
 
 // MARK: - Private : Capture session setup
 - (void)setupSession {
@@ -159,7 +162,7 @@
         return;
     }
     self.videoDevice = videoDevice;
-    self.maxZoomFactor = videoDevice.maxAvailableVideoZoomFactor;
+    self.maxZoomFactor = videoDevice.activeFormat.videoMaxZoomFactor;
     
     // Add audio input.
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeAudio];

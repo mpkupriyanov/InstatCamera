@@ -103,6 +103,10 @@
     [_camera zoomStop];
 }
 
+- (CGFloat)currentZoomFactor {
+    return [_camera currentZoomFactor];
+}
+
 - (CGFloat)maxZoomFactor {
     return _camera.maxZoomFactor;
 }
