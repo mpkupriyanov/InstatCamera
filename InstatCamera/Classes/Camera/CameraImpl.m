@@ -71,7 +71,13 @@
 
 - (void)zoomStop {
     if (_videoDevice.isRampingVideoZoom) {
-        [_videoDevice cancelVideoZoomRamp];
+        NSError *error = nil;
+        if ([_videoDevice lockForConfiguration:&error]) {
+            [_videoDevice cancelVideoZoomRamp];
+            [_videoDevice unlockForConfiguration];
+        } else {
+            NSLog(@"zoom error: %@", error);
+        }
     }
 }
 
