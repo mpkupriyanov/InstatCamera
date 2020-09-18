@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reset;
 - (void)saveToPath:(NSString *) path;
 - (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
+- (void)setChunkNumber:(NSInteger)number;
 // MARK: - Zoom
 @property (nonatomic, assign, readonly) CGFloat maxZoomFactor;
 - (void)setZoom:(CGFloat)zoomLevel;

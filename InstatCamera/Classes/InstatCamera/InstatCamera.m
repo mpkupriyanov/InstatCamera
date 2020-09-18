@@ -86,6 +86,10 @@
     [_writer setCaptureVideoOrientation:videoOrientation];
 }
 
+- (void)setChunkNumber:(NSInteger)number {
+    [_writer setChunkNumber:number];
+}
+
 - (BOOL)isRecording {
     return _camera.isRecording;
 }
@@ -127,7 +131,6 @@
 }
 
 // MARK: - Private : Timer
-
 - (void)setupRecordingTimer {
     
     RecordingTimerImpl *timer = [RecordingTimerImpl new];
@@ -135,7 +138,6 @@
 }
 
 // MARK: - Private : Notifications
-
 - (void)addObservers {
     
     /*

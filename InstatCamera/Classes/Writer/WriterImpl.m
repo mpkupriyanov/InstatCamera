@@ -66,6 +66,10 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     }
 }
 
+- (void)setChunkNumber:(NSInteger)number {
+    _chunkNumber = number;
+}
+
 // MARK: - Private
 - (void)setOrientationTo:(AVAssetWriterInput *)assetWriterInput {
     if (_needChangeOrientation) {
@@ -126,12 +130,12 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 }
 
 - (void)finishAssetWriter:(AVAssetWriter *)assetWriter url:(NSURL *) url {
-    
+    NSInteger chunkNumber = _chunkNumber;
     [assetWriter finishWritingWithCompletionHandler:^{
         NSLog(@"finishWriting says: %ld, error: %@", (long)assetWriter.status, assetWriter.error);
-        if ([self.delegate respondsToSelector:@selector(completedChunkFileURL:)]) {
+        if ([self.delegate respondsToSelector:@selector(completedChunkNumber:fileURL:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.delegate completedChunkFileURL:url];
+                [self.delegate completedChunkNumber: chunkNumber fileURL:url];
             });
         }
     }];

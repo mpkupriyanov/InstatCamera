@@ -19,5 +19,6 @@
 - (void)reset;
 - (void)saveToPath:(NSString *) path;
 - (void)setCaptureVideoOrientation:(AVCaptureVideoOrientation)videoOrientation;
+- (void)setChunkNumber:(NSInteger)number;
 @end
 #endif /* Writer_h */

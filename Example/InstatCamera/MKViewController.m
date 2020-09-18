@@ -151,17 +151,16 @@
 }
 
 // MARK: - InstatCameraDelegate
-- (void)completedChunkFileURL:(NSURL *) file_url {
-    
+- (void)completedChunkNumber:(NSInteger)number fileURL:(NSURL *)file_url {
     [_chunkURLArray addObject:file_url];
     // Share all files when stoped recording
     if (_instatCamera.isRecording == false) {
         [self updateButtons];
         if (_shareSwitch.isOn == true) {
-            
             [self share];
         }
     }
+    NSLog(@"chunk number: %ld", (long)number);
     NSLog(@"%@", file_url.absoluteString);
 }
 
