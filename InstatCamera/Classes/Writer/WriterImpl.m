@@ -146,16 +146,18 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     
     CMTime presentationTimeStamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
     
-    if (mediaType == AVMediaTypeAudio) {
-        if (_audioAssetWriterInput.readyForMoreMediaData && _audioAssetWriterInput != nil) {
-            if (![_audioAssetWriterInput appendSampleBuffer: sampleBuffer]) {
-                NSLog(@"audio append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+    if (_assetWriter.status == AVAssetWriterStatusWriting) {
+        if (mediaType == AVMediaTypeAudio) {
+            if (_audioAssetWriterInput.readyForMoreMediaData && _audioAssetWriterInput != nil) {
+                if (![_audioAssetWriterInput appendSampleBuffer: sampleBuffer]) {
+                    NSLog(@"audio append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+                }
             }
-        }
-    } else {
-        if (_videoAssetWriterInput.readyForMoreMediaData && _videoAssetWriterInput != nil) {
-            if (![_videoAssetWriterInput appendSampleBuffer: sampleBuffer]) {
-                NSLog(@"video append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+        } else {
+            if (_videoAssetWriterInput.readyForMoreMediaData && _videoAssetWriterInput != nil) {
+                if (![_videoAssetWriterInput appendSampleBuffer: sampleBuffer]) {
+                    NSLog(@"video append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+                }
             }
         }
     }
