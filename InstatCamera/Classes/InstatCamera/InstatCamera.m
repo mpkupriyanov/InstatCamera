@@ -37,7 +37,6 @@
 }
 
 - (void)dealloc {
-    
     if (_camera.isRecording) {
         [_camera stopRecording];
     }
@@ -48,6 +47,10 @@
 // MARK: - Public
 - (AVCaptureSession *)captureSession {
     return _camera.session;
+}
+
+- (AVCaptureDevice *)videoDevice {
+    return _camera.videoDevice;
 }
 
 - (void)setDelegate:(id<InstatCameraDelegate>)delegate {

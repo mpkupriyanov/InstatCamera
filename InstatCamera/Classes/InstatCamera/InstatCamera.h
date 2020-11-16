@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InstatCamera : NSObject
 @property (nonatomic, strong, readonly) AVCaptureSession *captureSession;
+@property (nonatomic, readonly) AVCaptureDevice *videoDevice;
 @property (nonatomic, assign, readonly) BOOL isRecording;
 @property (nonatomic, weak) id <InstatCameraDelegate> delegate;
 
