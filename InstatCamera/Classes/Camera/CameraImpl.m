@@ -11,7 +11,7 @@
 
 @interface CameraImpl () <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 @property (nonatomic, strong, readwrite) AVCaptureSession *session;
-@property (nonatomic, strong) AVCaptureDevice *videoDevice;
+@property (nonatomic, strong, readwrite) AVCaptureDevice *videoDevice;
 @property (nonatomic, strong) AVCaptureSessionPreset sessionPreset;
 @property (nonatomic, assign, readwrite, getter=isRecording) BOOL recording;
 @property (nonatomic) dispatch_queue_t sessionQueue;

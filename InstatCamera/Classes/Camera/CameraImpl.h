@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CameraImpl : NSObject <Camera>
 @property (nonatomic, readonly) AVCaptureSession* session;
+@property (nonatomic, readonly) AVCaptureDevice *videoDevice;
 @property (nonatomic, readonly) CameraStatus status;
 @property (nonatomic, assign, readonly, getter=isRecording) BOOL recording;
 @property (nonatomic, weak) id <OutputSampleBufferDelegate> delegate;

@@ -10,6 +10,7 @@
 @import AVFoundation.AVCaptureSessionPreset;
 @protocol OutputSampleBufferDelegate;
 @class AVCaptureSession;
+@class AVCaptureDevice;
 
 typedef NS_ENUM(NSInteger, CameraStatus) {
     Success,
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSInteger, CameraStatus) {
 
 @protocol Camera <NSObject>
 @property (nonatomic, readonly) AVCaptureSession* session;
+@property (nonatomic, readonly) AVCaptureDevice *videoDevice;
 @property (nonatomic, readonly) CameraStatus status;
 @property (nonatomic, assign, readonly, getter=isRecording) BOOL recording;
 @property (nonatomic, weak) id <OutputSampleBufferDelegate> delegate;
