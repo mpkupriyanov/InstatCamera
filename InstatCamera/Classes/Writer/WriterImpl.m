@@ -23,6 +23,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 @property (nonatomic, strong) NSString *savePath;
 @property (nonatomic, assign) AVCaptureVideoOrientation currentVideoOrientation;
 @property (nonatomic, assign) BOOL needChangeOrientation;
+@property (nonatomic, assign) BOOL isRecording;
 @end
 
 @implementation WriterImpl
@@ -43,7 +44,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 // MARK: - Public
 - (void)finish {
     
-    NSURL *url = _chunkOutputURL;
+    NSURL *url = [_chunkOutputURL copy];
     AVAssetWriter *chunkAssetWriter = _assetWriter;
     [self finishAssetWriter:chunkAssetWriter url:url];
     _assetWriter = nil;
@@ -100,14 +101,16 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     NSError *assetWriterError;
     _assetWriter = [AVAssetWriter assetWriterWithURL:chunkOutputURL fileType:AVFileTypeQuickTimeMovie error:&assetWriterError];
     if (assetWriterError || _assetWriter == nil) {
-        NSLog(@"Error Setting assetWriter: %@", assetWriterError);
+        NSLog(@"Error setting assetWriter: %@", assetWriterError);
     }
-    
+    _assetWriter.shouldOptimizeForNetworkUse = true;
+
     // TODO: get dimensions from image CMSampleBufferGetImageBuffer(sampleBuffer)
     
     // Video input
     _videoAssetWriterInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings: _videoSettings];
     _videoAssetWriterInput.expectsMediaDataInRealTime = YES;
+    
     [self setOrientationTo:_videoAssetWriterInput];
     
     if ([_assetWriter canAddInput:_videoAssetWriterInput]) {
@@ -127,12 +130,13 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     
     [_assetWriter startWriting];
     [_assetWriter startSessionAtSourceTime: _chunkStartTime];
+    _isRecording = true;
 }
 
 - (void)finishAssetWriter:(AVAssetWriter *)assetWriter url:(NSURL *) url {
     NSInteger chunkNumber = _chunkNumber - 1;
     [assetWriter finishWritingWithCompletionHandler:^{
-        NSLog(@"finishWriting says: %ld, error: %@", (long)assetWriter.status, assetWriter.error);
+        NSLog(@"finishWriting says: %@, error: %@", [self statusDescription:_assetWriter.status], assetWriter.error);
         if ([self.delegate respondsToSelector:@selector(completedChunkNumber:fileURL:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate completedChunkNumber: chunkNumber fileURL:url];
@@ -146,20 +150,26 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     
     CMTime presentationTimeStamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
     
-    if (_assetWriter.status == AVAssetWriterStatusWriting) {
-        if (mediaType == AVMediaTypeAudio) {
+    if (_assetWriter.status == AVAssetWriterStatusWriting && _isRecording) {
+        if ([mediaType isEqualToString:AVMediaTypeAudio]) {
             if (_audioAssetWriterInput.readyForMoreMediaData && _audioAssetWriterInput != nil) {
                 if (![_audioAssetWriterInput appendSampleBuffer: sampleBuffer]) {
-                    NSLog(@"audio append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+                    NSLog(@"audio append error:  %@", _assetWriter.error);
+                } else {
+                    NSLog(@"audio appended");
                 }
             }
-        } else {
+        } else if ([mediaType isEqualToString:AVMediaTypeVideo]) {
             if (_videoAssetWriterInput.readyForMoreMediaData && _videoAssetWriterInput != nil) {
                 if (![_videoAssetWriterInput appendSampleBuffer: sampleBuffer]) {
-                    NSLog(@"video append says NO: %ld, %@", (long)_assetWriter.status, _assetWriter.error);
+                    NSLog(@"video append error: %@", _assetWriter.error);
+                } else {
+                    NSLog(@"video appended");
                 }
             }
         }
+    } else {
+        NSLog(@"_assetWriter.status: %@", [self statusDescription:_assetWriter.status]);
     }
         
     if (_assetWriter == nil) {
@@ -167,14 +177,37 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     } else {
         Float64 currentChunkDuration = CMTimeGetSeconds(CMTimeSubtract(presentationTimeStamp, _chunkStartTime));
         
-        if (currentChunkDuration > _chunkDuration) {
+        if (currentChunkDuration >= _chunkDuration) {
+            _isRecording = false;
+            [_videoAssetWriterInput markAsFinished];
+            [_audioAssetWriterInput markAsFinished];
             [_assetWriter endSessionAtSourceTime:presentationTimeStamp];
             
-            NSURL *url = _chunkOutputURL;
+            NSURL *url = [_chunkOutputURL copy];
             AVAssetWriter *chunkAssetWriter = _assetWriter;
             [self finishAssetWriter:chunkAssetWriter url:url];
             [self createWriterInputWith:presentationTimeStamp];
         }
+    }
+}
+
+- (NSString *)statusDescription: (AVAssetWriterStatus) status {
+    switch (status) {
+        case AVAssetWriterStatusWriting:
+            return @"AVAssetWriterStatusWriting";
+            break;
+        case AVAssetWriterStatusUnknown:
+            return @"AVAssetWriterStatusUnknown";
+            break;
+        case AVAssetWriterStatusCompleted:
+            return @"AVAssetWriterStatusCompleted";
+            break;
+        case AVAssetWriterStatusFailed:
+            return @"AVAssetWriterStatusFailed";
+            break;
+        case AVAssetWriterStatusCancelled:
+            return @"AVAssetWriterStatusCancelled";
+            break;
     }
 }
 @end
