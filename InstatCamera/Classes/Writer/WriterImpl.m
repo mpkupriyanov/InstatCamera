@@ -136,7 +136,9 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
 - (void)finishAssetWriter:(AVAssetWriter *)assetWriter url:(NSURL *) url {
     NSInteger chunkNumber = _chunkNumber - 1;
     [assetWriter finishWritingWithCompletionHandler:^{
-        NSLog(@"finishWriting says: %@, error: %@", [self statusDescription:_assetWriter.status], assetWriter.error);
+        if (assetWriter.error != nil) {
+            NSLog(@"finishWriting says: %@, error: %@", [self statusDescriptionself:assetWriter.status], assetWriter.error);
+        }
         if ([self.delegate respondsToSelector:@selector(completedChunkNumber:fileURL:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate completedChunkNumber: chunkNumber fileURL:url];
@@ -155,21 +157,15 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
             if (_audioAssetWriterInput.readyForMoreMediaData && _audioAssetWriterInput != nil) {
                 if (![_audioAssetWriterInput appendSampleBuffer: sampleBuffer]) {
                     NSLog(@"audio append error:  %@", _assetWriter.error);
-                } else {
-                    NSLog(@"audio appended");
                 }
             }
         } else if ([mediaType isEqualToString:AVMediaTypeVideo]) {
             if (_videoAssetWriterInput.readyForMoreMediaData && _videoAssetWriterInput != nil) {
                 if (![_videoAssetWriterInput appendSampleBuffer: sampleBuffer]) {
                     NSLog(@"video append error: %@", _assetWriter.error);
-                } else {
-                    NSLog(@"video appended");
                 }
             }
         }
-    } else {
-        NSLog(@"_assetWriter.status: %@", [self statusDescription:_assetWriter.status]);
     }
         
     if (_assetWriter == nil) {
