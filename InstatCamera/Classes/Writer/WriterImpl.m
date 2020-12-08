@@ -137,7 +137,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     NSInteger chunkNumber = _chunkNumber - 1;
     [assetWriter finishWritingWithCompletionHandler:^{
         if (assetWriter.error != nil) {
-            NSLog(@"finishWriting says: %@, error: %@", [self statusDescriptionself:assetWriter.status], assetWriter.error);
+            NSLog(@"finishWriting says: %@, error: %@", [self statusDescription:assetWriter.status], assetWriter.error);
         }
         if ([self.delegate respondsToSelector:@selector(completedChunkNumber:fileURL:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
