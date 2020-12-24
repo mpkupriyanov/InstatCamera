@@ -26,8 +26,8 @@
     return @{ AVVideoCodecKey: AVVideoCodecTypeH264,
               AVVideoHeightKey: @(720),
               AVVideoWidthKey: @(1280),
-              AVVideoCompressionPropertiesKey: @{ AVVideoAverageBitRateKey: @(1600000),
-                                                  AVVideoProfileLevelKey: AVVideoProfileLevelH264Main32
+              AVVideoCompressionPropertiesKey: @{ AVVideoAverageBitRateKey: @(3000000),
+                                                  AVVideoProfileLevelKey: AVVideoProfileLevelH264MainAutoLevel
               }
     };
 }
@@ -36,8 +36,8 @@
     return @{ AVVideoCodecKey: AVVideoCodecTypeH264,
               AVVideoHeightKey: @(1080),
               AVVideoWidthKey: @(1920),
-              AVVideoCompressionPropertiesKey: @{ AVVideoAverageBitRateKey: @(3500000),
-                                                  AVVideoProfileLevelKey: AVVideoProfileLevelH264Main41
+              AVVideoCompressionPropertiesKey: @{ AVVideoAverageBitRateKey: @(7000000),
+                                                  AVVideoProfileLevelKey: AVVideoProfileLevelH264MainAutoLevel
               }
     };
 }

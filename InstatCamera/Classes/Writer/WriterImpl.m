@@ -103,7 +103,7 @@ static const NSTimeInterval kDefaultChunkDuration = 5.000f;
     if (assetWriterError || _assetWriter == nil) {
         NSLog(@"Error setting assetWriter: %@", assetWriterError);
     }
-    _assetWriter.shouldOptimizeForNetworkUse = true;
+//    _assetWriter.shouldOptimizeForNetworkUse = true;
 
     // TODO: get dimensions from image CMSampleBufferGetImageBuffer(sampleBuffer)
     
