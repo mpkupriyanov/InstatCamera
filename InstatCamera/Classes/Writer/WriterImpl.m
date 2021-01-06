@@ -9,7 +9,7 @@
 #import "InstatCameraDelegate.h"
 @import AVFoundation;
 
-static const NSTimeInterval kDefaultChunkDuration = 5.000f;
+static const NSTimeInterval kDefaultChunkDuration = 15.000f;
 
 @interface WriterImpl()
 @property (nonatomic, strong) AVAssetWriter *assetWriter;
